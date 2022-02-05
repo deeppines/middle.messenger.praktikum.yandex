@@ -5,13 +5,17 @@
     "node": ">= 12"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
-  "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel ./src/pages/**/*.hbs --port 3000",
+    "build": "parcel build ./src/pages/**/*.hbs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "@parcel/transformer-sass": "^2.2.1",
     "parcel": "^2.2.1"
   }
 }
