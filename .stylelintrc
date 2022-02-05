@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "string-quotes": "single",
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "except": ["text-size-adjust", "overflow-style", "tap-highlight-color"]
+      }
+    ]
+  }
+}
