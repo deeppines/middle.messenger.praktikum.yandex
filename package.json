@@ -2,7 +2,7 @@
   "name": "pines-web-chat",
   "version": "1.0.0",
   "engines": {
-    "node": ">=12.22.10"
+    "node": ">= 12"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "src/index.html",
