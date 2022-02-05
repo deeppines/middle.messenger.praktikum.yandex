@@ -1,0 +1,17 @@
+{
+  "name": "pines-web-chat",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=12.22.10"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}
