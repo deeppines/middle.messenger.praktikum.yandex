@@ -5,7 +5,7 @@
     "property-no-vendor-prefix": [
       true,
       {
-        "except": ["text-size-adjust", "overflow-style", "tap-highlight-color"]
+        "ignoreProperties": ["text-size-adjust", "overflow-style", "tap-highlight-color"]
       }
     ]
   }
