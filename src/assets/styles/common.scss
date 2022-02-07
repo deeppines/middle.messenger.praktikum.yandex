@@ -1,3 +1,12 @@
+// services
 @import 'services';
+
+// normalize
 @import '../../../node_modules/normalize.css/normalize.css';
+
+// core
 @import 'core/base';
+@import 'core/typography';
+
+// layout
+@import '../../ui/layouts/ui/ui';
