@@ -6,8 +6,8 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel ./src/pages/*.hbs --port 3000",
-    "build": "parcel build ./src/pages/*.hbs --no-source-maps --no-cache && node postbuild.js",
+    "start": "parcel ./src/pages/*.pug --port 3000",
+    "build": "parcel build ./src/pages/*.pug --no-source-maps --no-cache && node postbuild.js",
     "lint": "npx stylelint ./src/**/*.scss --fix",
     "prepare": "husky install"
   },
@@ -15,14 +15,11 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "@parcel/transformer-pug": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
     "husky": "^7.0.4",
     "parcel": "^2.2.1",
     "stylelint": "^14.3.0",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "lodash.escaperegexp": "^4.1.2",
-    "replace-in-file": "^6.3.2"
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
