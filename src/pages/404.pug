@@ -1,0 +1,11 @@
+extends ../ui/layouts/default/default.pug
+
+block vars
+  - var title = 'Page Not Found - 404'
+  - var errorTitle = '404'
+  - var errorDesc = 'Не туда попали'
+  - var errorUrl = '/'
+
+block content
+  main
+    include ../ui/components/section-error/section-error.pug
