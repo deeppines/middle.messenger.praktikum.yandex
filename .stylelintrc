@@ -2,6 +2,7 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "string-quotes": "single",
+    "scss/no-global-function-names": null,
     "property-no-vendor-prefix": [
       true,
       {
