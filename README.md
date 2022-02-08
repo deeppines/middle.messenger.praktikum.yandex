@@ -4,7 +4,7 @@
 
 ## Установка
 
-Для корректной работы потребуется [Node.js](https://nodejs.org/) версии 12 и выше.
+Для корректной работы потребуется [Node.js](https://nodejs.org/) версии 14 и выше.
 
 ```shell
 git clone https://github.com/deeppines/middle.messenger.praktikum.yandex.git
@@ -17,3 +17,7 @@ npm i
 ```shell
 npm run start
 ```
+
+## Макеты
+
+Макеты проекта в [Figma](https://www.figma.com/file/2HM1RtnaUzfmjMgRSyfSwy/WebChat?node-id=2%3A4)
