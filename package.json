@@ -15,8 +15,10 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.2.1",
     "@parcel/transformer-pug": "^2.2.1",
     "@parcel/transformer-sass": "^2.2.1",
+    "@parcel/transformer-webmanifest": "^2.2.1",
     "husky": "^7.0.4",
     "parcel": "^2.2.1",
     "stylelint": "^14.3.0",
