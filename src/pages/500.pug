@@ -1,0 +1,11 @@
+extends ../ui/layouts/default/default.pug
+
+block vars
+  - var title = 'Internal Server Error - 500'
+  - var errorTitle = '500'
+  - var errorDesc = 'Мы уже фиксим'
+  - var errorUrl = '/'
+
+block content
+  main
+    include ../ui/components/section-error/section-error.pug
