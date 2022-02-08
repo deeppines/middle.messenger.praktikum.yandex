@@ -1,0 +1,41 @@
+//- ui
+extends ../ui/layouts/ui/ui.pug
+
+block vars
+  - var title = 'UI'
+  -
+    var pages = [
+      {
+        name: '404',
+        url: '/'
+      },
+      {
+        name: '5хх',
+        url: '/'
+      },
+      {
+        name: 'Авторизация',
+        url: '/'
+      },
+      {
+        name: 'Вход',
+        url: '/'
+      },
+      {
+        name: 'Чат',
+        url: '/'
+      },
+      {
+        name: 'Профиль',
+        url: '/'
+      },
+    ]
+
+block mixins
+  include ../ui/components/ui-list/ui-list.pug
+
+block content
+  main
+    h1 Список страниц
+    +uilist(pages)
+
