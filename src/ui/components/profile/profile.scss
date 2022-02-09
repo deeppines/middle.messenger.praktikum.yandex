@@ -1,0 +1,50 @@
+.profile {
+  width: 100%;
+  max-width: 510px;
+  margin: auto;
+  padding: 60px 0;
+
+  &__header,
+  &__main {
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    background-color: $grey;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $grey;
+
+    &:last-child {
+      border-color: $black-light;
+    }
+  }
+
+  &__item-value {
+    color: $grey2;
+  }
+}

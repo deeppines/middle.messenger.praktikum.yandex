@@ -5,4 +5,12 @@
   &:hover {
     color: lighten($color: $blue, $amount: 10);
   }
+
+  &--red {
+    color: $red;
+
+    &:hover {
+      color: lighten($color: $red, $amount: 8);
+    }
+  }
 }

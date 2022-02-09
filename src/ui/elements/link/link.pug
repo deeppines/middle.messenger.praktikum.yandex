@@ -1,2 +1,5 @@
-mixin link(url, name)
-  a.link(href=url)= name
+mixin link(url, name, mod)
+  a.link(
+    href=url
+    class=mod
+  )= name
