@@ -1,0 +1,17 @@
+.chat {
+  background: $black-light;
+  color: $white;
+
+  main {
+    display: flex;
+    height: 100%;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 1px solid $grey;
+    background-color: $black;
+  }
+}
