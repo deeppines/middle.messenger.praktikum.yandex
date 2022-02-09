@@ -3,6 +3,7 @@
   "rules": {
     "string-quotes": "single",
     "scss/no-global-function-names": null,
+    "selector-class-pattern": null,
     "property-no-vendor-prefix": [
       true,
       {
