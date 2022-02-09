@@ -10,8 +10,23 @@
   color: $white;
   background-color: $blue;
   transition: background-color 0.25s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     background-color: lighten($color: $blue, $amount: 5);
+  }
+
+  &--rounded {
+    border-radius: 50%;
+  }
+
+  &--back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: auto 18px auto 17px;
   }
 }
