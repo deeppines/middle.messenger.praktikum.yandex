@@ -1,0 +1,16 @@
+.modal {
+  width: 100%;
+  max-width: 340px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: $black;
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
