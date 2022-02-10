@@ -1,0 +1,11 @@
+mixin chatListItem(data)
+  buttun(type="button" name="chat").chat-list__item
+    .chat-list__item-img
+    .chat-list__item-main
+      .chat-list__item-title= data.title
+      .chat-list__item-preview= data.preview
+    .chat-list__item-info
+      .chat-list__item-date= data.date
+      if data.count
+        .chat-list__item-counter
+          span= data.count
