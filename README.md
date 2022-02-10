@@ -18,6 +18,10 @@ npm i
 npm run start
 ```
 
+### Netlify
+
+[Ссылка на Хостинг](https://awesome-borg-c5a7b1.netlify.app/)
+
 ## Макеты
 
 Макеты проекта в [Figma](https://www.figma.com/file/2HM1RtnaUzfmjMgRSyfSwy/WebChat?node-id=2%3A4)
