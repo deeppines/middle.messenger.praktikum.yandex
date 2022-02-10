@@ -3,3 +3,5 @@ mixin link(url, name, mod)
     href=url
     class=mod
   )= name
+    if block
+      block

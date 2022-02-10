@@ -1,0 +1,14 @@
+extends ../ui/layouts/chat/chat.pug
+
+block vars
+  - var title = 'Pines Chat'
+
+block mixins
+  include ../ui/components/section/section.pug
+
+block sidebar
+  include ../ui/components/header/header.pug
+
+block content
+  +section()
+    p Выберите чат чтобы отправить сообщение

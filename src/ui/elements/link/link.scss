@@ -13,4 +13,21 @@
       color: lighten($color: $red, $amount: 8);
     }
   }
+
+  &--grey {
+    color: $grey2;
+
+    &:hover {
+      color: lighten($color: $grey2, $amount: 8);
+    }
+  }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+
+    object {
+      margin-left: 5px;
+    }
+  }
 }
