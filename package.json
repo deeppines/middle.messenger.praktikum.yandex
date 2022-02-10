@@ -6,8 +6,9 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel ./src/pages/*.pug --port 3000",
-    "build": "parcel build ./src/pages/*.pug --no-source-maps --no-cache && node postbuild.js",
+    "start": "npm i && npm run build && node ./server.js",
+    "watch": "parcel ./src/pages/*.pug --port 3000",
+    "build": "parcel build ./src/pages/*.pug --no-source-maps --no-cache",
     "lint": "npx stylelint ./src/**/*.scss --fix",
     "prepare": "husky install"
   },
@@ -19,6 +20,7 @@
     "@parcel/transformer-pug": "^2.3.1",
     "@parcel/transformer-sass": "^2.3.1",
     "@parcel/transformer-webmanifest": "^2.3.1",
+    "@parcel/config-default": "^2.3.1",
     "express": "^4.17.2",
     "husky": "^7.0.4",
     "parcel": "^2.3.1",
