@@ -23,6 +23,11 @@
     &:hover {
       background-color: $grey;
     }
+
+    &--active {
+      cursor: initial;
+      background-color: $grey;
+    }
   }
 
   &__item-img {
@@ -59,7 +64,7 @@
     font-size: 12px;
     line-height: 15px;
     overflow: hidden;
-    display: -webkit-box;
+    display: box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     height: 30px;

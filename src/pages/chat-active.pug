@@ -1,4 +1,4 @@
-extends ../ui/layouts/chat/chat.pug
+extends ../ui/layouts/chat/chat
 
 block vars
   - var title = 'Pines Chat'
@@ -27,6 +27,7 @@ block vars
         preview: 'Вы: Круто!',
         date: 'Пт',
         count: '',
+        active: true,
       },
       {
         title: 'тет-а-теты',
@@ -103,14 +104,14 @@ block vars
     ]
 
 block mixins
-  include ../ui/components/header/header.pug
-  include ../ui/components/section/section.pug
-  include ../ui/components/chat-list/chat-list.pug
+  include ../ui/components/header/header
+  include ../ui/components/section/section
+  include ../ui/components/chat-list/chat-list
+  include ../ui/components/chat-header/chat-header
 
 block sidebar
   +header()
   +chatList(chats)
 
 block content
-  +section()
-    p Выберите чат чтобы отправить сообщение
+  +chatHeader()

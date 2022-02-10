@@ -1,5 +1,9 @@
 mixin chatListItem(data)
-  buttun(type="button" name="chat").chat-list__item
+  buttun(
+    type="button"
+    name="chat"
+    class=data.active ? 'chat-list__item chat-list__item--active' : 'chat-list__item'
+  )
     .chat-list__item-img
     .chat-list__item-main
       .chat-list__item-title= data.title
