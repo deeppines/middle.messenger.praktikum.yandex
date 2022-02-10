@@ -102,6 +102,24 @@ block vars
         count: ''
       },
     ]
+  -
+    var messages = [
+      {
+        type: 'date',
+        value: '19 июня'
+      },
+      {
+        type: 'inbox',
+        value: 'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой. Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.',
+        date: '11:56'
+      },
+      {
+        type: 'outbox',
+        value: 'Круто!',
+        date: '12:00',
+        sended: true,
+      }
+    ]
 
 block mixins
   include ../ui/components/header/header
@@ -110,6 +128,7 @@ block mixins
   include ../ui/components/chat-view/chat-view
   include ../ui/components/chat-header/chat-header
   include ../ui/components/chat-footer/chat-footer
+  include ../ui/components/message-view/message-view
 
 block sidebar
   +header()
@@ -118,4 +137,5 @@ block sidebar
 block content
   +chatView()
     +chatHeader()
+    +messageView(messages)
     +chatFooter()
