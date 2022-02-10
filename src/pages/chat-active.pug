@@ -107,11 +107,15 @@ block mixins
   include ../ui/components/header/header
   include ../ui/components/section/section
   include ../ui/components/chat-list/chat-list
+  include ../ui/components/chat-view/chat-view
   include ../ui/components/chat-header/chat-header
+  include ../ui/components/chat-footer/chat-footer
 
 block sidebar
   +header()
   +chatList(chats)
 
 block content
-  +chatHeader()
+  +chatView()
+    +chatHeader()
+    +chatFooter()
