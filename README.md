@@ -22,6 +22,8 @@ npm run start
 
 [Ссылка на Хостинг](https://awesome-borg-c5a7b1.netlify.app/)
 
+[Ссылка на превью деплоя](https://620634b24e0af58d7a9afbbb--awesome-borg-c5a7b1.netlify.app/) если первая не открывается
+
 ## Макеты
 
 Макеты проекта в [Figma](https://www.figma.com/file/2HM1RtnaUzfmjMgRSyfSwy/WebChat?node-id=2%3A4)
