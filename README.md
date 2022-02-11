@@ -1,5 +1,7 @@
 # Pines Chat
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a97a2c64-850e-4f5e-aabe-197c8eba4539/deploy-status)](https://app.netlify.com/sites/awesome-borg-c5a7b1/deploys)
+
 Учебный проект [Яндекс.Практикум](https://practicum.yandex.ru/)
 
 ## Установка
