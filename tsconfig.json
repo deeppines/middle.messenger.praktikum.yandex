@@ -26,6 +26,7 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedParameters": true,
+    "sourceMap": true,
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts"]
