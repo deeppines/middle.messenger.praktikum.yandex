@@ -1,9 +1,9 @@
 # Pines Chat
 
-![Netlify](https://img.shields.io/netlify/a97a2c64-850e-4f5e-aabe-197c8eba4539)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/deeppines/middle.messenger.praktikum.yandex)
-![GitHub issues](https://img.shields.io/github/issues-raw/deeppines/middle.messenger.praktikum.yandex)
-![GitHub](https://img.shields.io/github/license/deeppines/middle.messenger.praktikum.yandex)
+![Netlify](https://img.shields.io/netlify/a97a2c64-850e-4f5e-aabe-197c8eba4539?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
+![GitHub](https://img.shields.io/github/license/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
 
 Учебный проект [Яндекс.Практикум](https://practicum.yandex.ru/)
 
