@@ -104,7 +104,7 @@ class Block {
     return new DocumentFragment();
   }
 
-  protected getContent(): HTMLElement | null {
+  getContent(): HTMLElement | null {
     return this.element;
   }
 
