@@ -1,6 +1,9 @@
 # Pines Chat
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a97a2c64-850e-4f5e-aabe-197c8eba4539/deploy-status)](https://app.netlify.com/sites/awesome-borg-c5a7b1/deploys)
+![Netlify](https://img.shields.io/netlify/a97a2c64-850e-4f5e-aabe-197c8eba4539)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/deeppines/middle.messenger.praktikum.yandex)
+![GitHub issues](https://img.shields.io/github/issues-raw/deeppines/middle.messenger.praktikum.yandex)
+![GitHub](https://img.shields.io/github/license/deeppines/middle.messenger.praktikum.yandex)
 
 Учебный проект [Яндекс.Практикум](https://practicum.yandex.ru/)
 
@@ -24,12 +27,10 @@ npm run start
 
 [Ссылка на Хостинг](https://awesome-borg-c5a7b1.netlify.app/)
 
-[Ссылка на превью деплоя](https://620634b24e0af58d7a9afbbb--awesome-borg-c5a7b1.netlify.app/) если первая не открывается
-
 ## Макеты
 
 Макеты проекта в [Figma](https://www.figma.com/file/2HM1RtnaUzfmjMgRSyfSwy/WebChat?node-id=2%3A4)
 
 ## Pull Request
 
-[Ссылка для ревью](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)
+[Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)
