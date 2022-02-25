@@ -12,8 +12,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "start": "npm run build && node ./server.js",
-    "dev": "parcel ./src/pages/*.pug --port 3000",
-    "build": "parcel build ./src/pages/*.pug --no-source-maps --no-cache",
+    "dev": "parcel ./src/pages/**/*.html --port 3000",
+    "build": "parcel build ./src/pages/**/*.html --no-source-maps --no-cache",
     "lint": "tsc --noEmit && eslint --fix ./src/**/*.ts && npx stylelint ./src/**/*.scss --fix",
     "prepare": "husky install"
   },

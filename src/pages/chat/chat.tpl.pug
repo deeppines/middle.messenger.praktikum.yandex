@@ -1,4 +1,4 @@
-extends ../ui/layouts/chat/chat.pug
+extends ../../ui/layouts/chat/chat.pug
 
 block vars
   - var title = 'Pines Chat'
@@ -103,9 +103,9 @@ block vars
     ]
 
 block mixins
-  include ../ui/components/header/header.pug
-  include ../ui/components/section/section.pug
-  include ../ui/components/chat-list/chat-list.pug
+  include ../../ui/components/header/header.pug
+  include ../../ui/components/section/section.pug
+  include ../../ui/components/chat-list/chat-list.pug
 
 block sidebar
   +header()

@@ -1,0 +1,9 @@
+include ../../ui/components/section/section.pug
+include ../../ui/components/modal/modal.pug
+
+- var modalTitle = 'Вход'
+
+main
+  +section()
+    +modal(modalTitle)
+      include ../../ui/components/forms/signin-form/signin-form.pug
