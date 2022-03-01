@@ -2,7 +2,10 @@ include ../../../elements/button/button
 include ../../../elements/link/link
 include ../../../elements/input/input
 
-form.form.form--signin
+form.form.form--signin(
+  data-url=url
+  data-method=method
+  )
   .form__body
     .form__row
       +input('text', 'login', 'Логин')
@@ -11,5 +14,4 @@ form.form.form--signin
   .form__footer
     .form__row
       +button('submit', 'Войти', 'Войти')
-    .form__row
-      +link('./signup.pug', 'Нет аккаунта?')
+    .form__row !{link}
