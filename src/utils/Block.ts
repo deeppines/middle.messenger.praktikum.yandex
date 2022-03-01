@@ -32,9 +32,11 @@ class Block {
 
     this.props = this._makePropsProxy(props);
 
-    this.eventBus = () => eventBus;
+    this.initChildren();
 
+    this.eventBus = () => eventBus;
     this._registerEvents(eventBus);
+
     eventBus.emit(Block.EVENTS.INIT);
   }
 
@@ -119,15 +121,10 @@ class Block {
         return typeof value === 'function' ? value.bind(target) : value;
       },
       set: (target: Record<string, unknown>, prop: string, value: unknown) => {
+        const oldProps = { ...target };
         target[prop] = value;
 
-        this.eventBus().emit(
-          Block.EVENTS.FLOW_CDU,
-          {
-            ...target,
-          },
-          target
-        );
+        this.eventBus().emit(Block.EVENTS.FLOW_CDU, oldProps, target);
         return true;
       },
       deleteProperty() {
@@ -187,13 +184,18 @@ class Block {
     return { props, childrens };
   }
 
+  protected initChildren() {
+    return;
+  }
+
   protected compile(template: (context: any) => string, context: any) {
     const fragment = this._createDocumentElement('template') as HTMLTemplateElement;
-    const htmlString = template(context);
 
     Object.entries(this.childrens).forEach(([key, child]) => {
       context[key] = `<div data-id="id-${child.id}"></div>`;
     });
+
+    const htmlString = template(context);
 
     fragment.innerHTML = htmlString;
 
