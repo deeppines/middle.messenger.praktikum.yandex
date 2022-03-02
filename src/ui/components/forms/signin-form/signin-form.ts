@@ -1,3 +1,5 @@
+import Button from '../../../../ui/elements/button/button';
+import Input from '../../../../ui/elements/input/input';
 import Link from '../../../../ui/elements/link/link';
 import Block from '../../../../utils/Block';
 
@@ -14,13 +16,32 @@ class SigninForm extends Block {
   }
 
   protected initChildren(): void {
-    this.childrens.test = new Link({
-      url: '#',
+    this.childrens.login = new Input({
+      type: 'text',
+      name: 'login',
+      placeholder: 'Логин',
+    });
+
+    this.childrens.password = new Input({
+      type: 'password',
+      name: 'password',
+      placeholder: 'Пароль',
+    });
+
+    this.childrens.link = new Link({
+      url: '/signup/signup.html',
+      name: 'Нет аккаунта?',
+    });
+
+    this.childrens.button = new Button({
+      type: 'submit',
+      name: 'Войти',
+      text: 'Войти',
     });
   }
 
   render() {
-    return this.compile(template, this.props);
+    return this.compile(template, { ...this.props });
   }
 }
 
