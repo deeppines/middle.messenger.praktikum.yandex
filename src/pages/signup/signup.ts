@@ -1,11 +1,15 @@
+import SignupForm from '../../ui/components/forms/signup-form/signup-form';
 import Block from '../../utils/Block';
 import renderDOM from '../../utils/renderDOM';
 
 import template from './signup.tpl.pug';
 
 class SignupPage extends Block {
-  constructor() {
-    super();
+  protected initChildren() {
+    this.childrens.form = new SignupForm({
+      url: '#',
+      method: 'POST',
+    });
   }
 
   render() {
