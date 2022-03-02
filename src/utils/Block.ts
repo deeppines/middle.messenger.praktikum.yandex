@@ -190,12 +190,8 @@ class Block {
 
   protected compile(template: (context: any) => string, context: any) {
     const fragment = this._createDocumentElement('template') as HTMLTemplateElement;
-    console.log(this.childrens);
 
     Object.entries(this.childrens).forEach(([key, child]) => {
-      console.log(key);
-      console.log(child);
-
       context[key] = `<div data-id="id-${child.id}"></div>`;
     });
 
