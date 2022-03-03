@@ -1,6 +1,7 @@
-import SignupForm from '../../ui/components/forms/signup-form/signup-form';
-import Block from '../../utils/Block';
-import renderDOM from '../../utils/renderDOM';
+import Block from '@/utils/Block';
+import renderDOM from '@/utils/renderDOM';
+
+import SignupForm from '@/ui/components/forms/signup-form/signup-form';
 
 import template from './signup.tpl.pug';
 

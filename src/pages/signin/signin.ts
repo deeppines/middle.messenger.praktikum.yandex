@@ -1,6 +1,7 @@
-import SigninForm from '../../ui/components/forms/signin-form/signin-form';
-import Block from '../../utils/Block';
-import renderDOM from '../../utils/renderDOM';
+import Block from '@/utils/Block';
+import renderDOM from '@/utils/renderDOM';
+
+import SigninForm from '@/ui/components/forms/signin-form/signin-form';
 
 import template from './signin.tpl.pug';
 
