@@ -1,6 +1,7 @@
 import Block from '@/utils/Block';
 
 import Link from '@/ui/elements/link/link';
+import Search from '@/ui/components/search/search';
 
 import template from './header.tpl.pug';
 
@@ -11,6 +12,8 @@ class Header extends Block {
       name: 'Профиль',
       mod: 'link--grey link--icon',
     });
+
+    this.childrens.search = new Search();
   }
 
   render() {
