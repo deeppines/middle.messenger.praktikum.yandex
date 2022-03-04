@@ -116,4 +116,40 @@ export const messages = [
     date: '12:00',
     sended: true,
   },
+  {
+    type: MessageType.DATE,
+    value: '21 июня',
+  },
+  {
+    type: MessageType.INBOX,
+    value:
+      'Сейчас зашёл дизигнер, не то чтобы с похмелья, скорее пьяный ещё. Глупо улыбаясь небритым лицом, положил на стол три пачки ЦВЕТНОЙ бумаги со словами: "я тут, это... в общем шредеру принёс, пусть порадуется. Только без меня не кормите". И ушёл ))',
+    date: '11:56',
+  },
+  {
+    type: MessageType.OUTBOX,
+    value: 'и меня подождите тогда!!!!!',
+    date: '12:00',
+    sended: true,
+  },
+  {
+    type: MessageType.INBOX,
+    value: 'вот никто ещё по-другому не отреагировал))) вроде взрослые же бля люди...',
+    date: '12:02',
+  },
+  {
+    type: MessageType.DATE,
+    value: '25 ноября 2007',
+  },
+  {
+    type: MessageType.INBOX,
+    value: 'что тобой там делают, на твоей кошмарной работе????',
+    date: '12:02',
+  },
+  {
+    type: MessageType.OUTBOX,
+    value: 'они мною работу работают!!',
+    date: '12:05',
+    sended: true,
+  },
 ];
