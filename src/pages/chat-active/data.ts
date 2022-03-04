@@ -152,4 +152,35 @@ export const messages = [
     date: '12:05',
     sended: true,
   },
+  {
+    type: MessageType.DATE,
+    value: '26 ноября 2007',
+  },
+  {
+    type: MessageType.INBOX,
+    value: 'не надо мне или - или. Веди себя и как программист, и как мужчина сразу.',
+    date: '12:02',
+  },
+  {
+    type: MessageType.OUTBOX,
+    value: 'Ок. Я хочу тебе Ctrl+V',
+    date: '12:05',
+    sended: true,
+  },
+  {
+    type: MessageType.DATE,
+    value: '27 ноября 2007',
+  },
+  {
+    type: MessageType.INBOX,
+    value: 'постоянно вылезает ошибка что делать?????????',
+    date: '12:02',
+  },
+  {
+    type: MessageType.OUTBOX,
+    value:
+      'Сейчас мы помедитируем, наш ведущий программист впадет в транс и попробует угадать текст ошибки и когда она у вас происходит.',
+    date: '12:05',
+    sended: true,
+  },
 ];
