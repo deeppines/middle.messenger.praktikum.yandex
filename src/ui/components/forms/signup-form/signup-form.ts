@@ -1,3 +1,5 @@
+import { TEvents } from '@/types/common';
+
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
@@ -9,6 +11,7 @@ import template from './signup-form.tpl.pug';
 interface ISignupForm {
   url: string;
   method: string;
+  events?: TEvents;
 }
 
 class SignupForm extends Block {

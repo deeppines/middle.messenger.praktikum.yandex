@@ -1,4 +1,5 @@
 import Block from '@/utils/Block';
+import { formDataToObject } from '@/utils/formDataToObject';
 import renderDOM from '@/utils/renderDOM';
 
 import SignupForm from '@/ui/components/forms/signup-form/signup-form';
@@ -10,7 +11,20 @@ class SignupPage extends Block {
     this.childrens.form = new SignupForm({
       url: '#',
       method: 'POST',
+      events: {
+        submit: (e) => this.submitHandler(e),
+      },
     });
+  }
+
+  submitHandler(e: Event) {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // eslint-disable-next-line no-restricted-syntax
+    console.log(formDataToObject(formData));
   }
 
   render() {
