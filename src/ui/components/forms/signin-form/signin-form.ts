@@ -1,7 +1,8 @@
-import Button from '../../../../ui/elements/button/button';
-import Input from '../../../../ui/elements/input/input';
-import Link from '../../../../ui/elements/link/link';
-import Block from '../../../../utils/Block';
+import Block from '@/utils/Block';
+
+import Button from '@/ui/elements/button/button';
+import Input from '@/ui/elements/input/input';
+import Link from '@/ui/elements/link/link';
 
 import template from './signin-form.tpl.pug';
 
