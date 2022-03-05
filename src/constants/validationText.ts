@@ -1,5 +1,3 @@
-const validationTexts = {
+export const validationTexts = {
   REQUIRED: 'Заполните поле',
 };
-
-export default validationTexts;
