@@ -1,5 +1,6 @@
 import Block from '@/utils/Block';
 
+import Button from '@/ui/elements/button/button';
 import Input from '@/ui/elements/input/input';
 import Link from '@/ui/elements/link/link';
 
@@ -10,6 +11,12 @@ class ProfileChangePassword extends Block {
     this.childrens.escLink = new Link({
       url: '/profile/profile.html',
       name: 'Отмена',
+    });
+
+    this.childrens.saveButton = new Button({
+      type: 'submit',
+      name: 'Сохранить',
+      text: 'Сохранить',
     });
 
     this.childrens.oldPassword = new Input({
