@@ -1,11 +1,13 @@
 import Block from '@/utils/Block';
 import renderDOM from '@/utils/renderDOM';
 
+import ProfileChangePassword from '@/ui/components/profile-change-password/profile-change-password';
+
 import template from './profile-change-password.tpl.pug';
 
 class ProfilePage extends Block {
-  constructor() {
-    super();
+  protected initChildren() {
+    this.childrens.profileChangePassword = new ProfileChangePassword();
   }
 
   render() {
