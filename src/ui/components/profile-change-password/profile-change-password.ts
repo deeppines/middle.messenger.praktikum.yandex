@@ -1,3 +1,5 @@
+import { TEvents } from '@/types/common';
+
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
@@ -6,7 +8,14 @@ import Link from '@/ui/elements/link/link';
 
 import template from './profile-change-password.tpl.pug';
 
+interface IProfileChangePassword {
+  events?: TEvents;
+}
 class ProfileChangePassword extends Block {
+  constructor(props: IProfileChangePassword) {
+    super(props);
+  }
+
   protected initChildren() {
     this.childrens.escLink = new Link({
       url: '/profile/profile.html',

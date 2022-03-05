@@ -1,3 +1,5 @@
+import { TEvents } from '@/types/common';
+
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
@@ -6,7 +8,14 @@ import Link from '@/ui/elements/link/link';
 
 import template from './profile-change-info.tpl.pug';
 
+interface IProfileChangeInfo {
+  events?: TEvents;
+}
 class ProfileChangeInfo extends Block {
+  constructor(props: IProfileChangeInfo) {
+    super(props);
+  }
+
   protected initChildren() {
     this.childrens.escLink = new Link({
       url: '/profile/profile.html',
