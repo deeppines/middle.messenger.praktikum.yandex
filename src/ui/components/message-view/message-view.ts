@@ -12,6 +12,7 @@ class MessageView extends Block {
   constructor(props: IMessageView) {
     super(props);
   }
+
   render() {
     return this.compile(template, { ...this.props });
   }
