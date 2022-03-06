@@ -6,6 +6,8 @@ import Button from '@/ui/elements/button/button';
 import Input from '@/ui/elements/input/input';
 import Link from '@/ui/elements/link/link';
 
+import FormField from '../../form-field/form-field';
+
 import template from './signin-form.tpl.pug';
 
 interface ISigninForm {
@@ -20,16 +22,24 @@ class SigninForm extends Block {
   }
 
   protected initChildren(): void {
-    this.childrens.login = new Input({
-      type: 'text',
+    this.childrens.login = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'login',
+        required: true,
+        minlength: 3,
+        maxlength: 20,
+      },
+      label: 'Логин',
       name: 'login',
-      placeholder: 'Логин',
+      validate: true,
     });
 
     this.childrens.password = new Input({
       type: 'password',
       name: 'password',
       placeholder: 'Пароль',
+      required: true,
     });
 
     this.childrens.link = new Link({

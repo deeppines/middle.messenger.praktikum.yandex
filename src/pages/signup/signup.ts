@@ -2,7 +2,7 @@ import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 import renderDOM from '@/utils/renderDOM';
 
-import SignupForm from '@/ui/components/forms/signup-form/signup-form';
+import SignupForm from '@/ui/components/form/signup-form/signup-form';
 
 import template from './signup.tpl.pug';
 
