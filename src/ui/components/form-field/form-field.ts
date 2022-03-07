@@ -37,30 +37,28 @@ class FormField extends Block {
   }
 
   onFocus(): void {
-    if (this.element) addClass(this.classes.hasValue, this.element);
+    addClass(this.classes.hasValue, this.element);
 
-    if (this.input && this.props.validate) {
-      this.validate(this.input);
-    }
+    this.validate(this.input);
   }
 
   onBlur(): void {
-    if (this.element && this.input && !inputHasValue(this.input)) {
+    if (!inputHasValue(this.input)) {
       removeClass(this.classes.hasValue, this.element);
     }
 
-    if (this.input && this.props.validate) {
-      this.validate(this.input);
-    }
+    this.validate(this.input);
   }
 
-  validate(input: HTMLInputElement): void {
-    if (!isValid(input)) {
-      if (this.element) addClass(this.classes.hasError, this.element);
-      if (this.message) setMessage(getValidationMsg(input), this.message);
-    } else {
-      if (this.element) removeClass(this.classes.hasValue, this.element);
-      if (this.message) setMessage('', this.message);
+  validate(input?: HTMLInputElement | null): void {
+    if (input && this.props.validate) {
+      if (!isValid(input)) {
+        addClass(this.classes.hasError, this.element);
+        setMessage(getValidationMsg(input), this.message);
+      } else {
+        removeClass(this.classes.hasError, this.element);
+        setMessage('', this.message);
+      }
     }
   }
 
