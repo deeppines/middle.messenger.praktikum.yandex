@@ -21,7 +21,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@deeppines/parcel-resolver-root": "^0.4.1",
+    "@deeppines/parcel-resolver-root": "0.4.1",
     "@parcel/config-default": "2.3.2",
     "@parcel/packager-raw-url": "2.3.2",
     "@parcel/transformer-pug": "2.3.2",
