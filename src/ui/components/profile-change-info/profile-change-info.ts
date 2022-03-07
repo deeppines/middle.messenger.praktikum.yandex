@@ -3,10 +3,12 @@ import { TEvents } from '@/types/common';
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
-import Input from '@/ui/elements/input/input';
 import Link from '@/ui/elements/link/link';
+import FormField from '@/ui/components/form-field/form-field';
 
 import template from './profile-change-info.tpl.pug';
+
+import { EMAIL, LOGIN, NAME, PHONE } from '@/constants';
 
 interface IProfileChangeInfo {
   events?: TEvents;
@@ -28,40 +30,78 @@ class ProfileChangeInfo extends Block {
       text: 'Сохранить',
     });
 
-    this.childrens.email = new Input({
-      type: 'email',
-      name: 'email',
-      placeholder: 'pochta@yandex.ru',
+    this.childrens.email = new FormField({
+      inputProps: {
+        type: 'email',
+        name: 'email',
+        placeholder: 'pochta@yandex.ru',
+        required: true,
+        pattern: EMAIL,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
 
-    this.childrens.login = new Input({
-      type: 'text',
-      name: 'login',
-      placeholder: 'ivanivanov',
+    this.childrens.login = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'login',
+        placeholder: 'ivanivanov',
+        required: true,
+        minlength: 3,
+        maxlength: 20,
+        pattern: LOGIN,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
 
-    this.childrens.firstName = new Input({
-      type: 'text',
-      name: 'first_name',
-      placeholder: 'Иван',
+    this.childrens.firstName = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'first_name',
+        placeholder: 'Иван',
+        required: true,
+        pattern: NAME,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
 
-    this.childrens.secondName = new Input({
-      type: 'text',
-      name: 'second_name',
-      placeholder: 'Иванов',
+    this.childrens.secondName = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'second_name',
+        placeholder: 'Иванов',
+        required: true,
+        pattern: NAME,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
 
-    this.childrens.displayName = new Input({
-      type: 'text',
-      name: 'display_name',
-      placeholder: 'Иван',
+    this.childrens.displayName = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'display_name',
+        placeholder: 'Иван',
+        required: true,
+        pattern: NAME,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
 
-    this.childrens.phone = new Input({
-      type: 'tel',
-      name: 'phone',
-      placeholder: '+7 (909) 967 30 30',
+    this.childrens.phone = new FormField({
+      inputProps: {
+        type: 'tel',
+        name: 'phone',
+        placeholder: '+7 (909) 967 30 30',
+        required: true,
+        pattern: PHONE,
+      },
+      classes: 'profile__field',
+      validate: true,
     });
   }
 
