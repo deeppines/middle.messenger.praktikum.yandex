@@ -5,7 +5,7 @@ import Block from '@/utils/Block';
 import template from './chat-list.tpl.pug';
 
 interface IChatList {
-  data: IChatItem[];
+  items: IChatItem[];
 }
 
 class ChatList extends Block {
