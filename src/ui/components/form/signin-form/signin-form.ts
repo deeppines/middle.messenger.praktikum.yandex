@@ -3,12 +3,12 @@ import { TEvents } from '@/types/common';
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
-import Input from '@/ui/elements/input/input';
 import Link from '@/ui/elements/link/link';
-
-import FormField from '../../form-field/form-field';
+import FormField from '@/ui/components/form-field/form-field';
 
 import template from './signin-form.tpl.pug';
+
+import { LOGIN, PASSWORD } from '@/constants';
 
 interface ISigninForm {
   url: string;
@@ -29,17 +29,25 @@ class SigninForm extends Block {
         required: true,
         minlength: 3,
         maxlength: 20,
+        pattern: LOGIN,
       },
       label: 'Логин',
       name: 'login',
       validate: true,
     });
 
-    this.childrens.password = new Input({
-      type: 'password',
+    this.childrens.password = new FormField({
+      inputProps: {
+        type: 'password',
+        name: 'password',
+        required: true,
+        minlength: 8,
+        maxlength: 40,
+        pattern: PASSWORD,
+      },
+      label: 'Пароль',
       name: 'password',
-      placeholder: 'Пароль',
-      required: true,
+      validate: true,
     });
 
     this.childrens.link = new Link({
