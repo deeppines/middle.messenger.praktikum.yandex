@@ -5,7 +5,8 @@ import template from './button.tpl.pug';
 interface IButton {
   type: string;
   name: string;
-  text: string;
+  text?: string;
+  classes?: string;
 }
 
 class Button extends Block {
