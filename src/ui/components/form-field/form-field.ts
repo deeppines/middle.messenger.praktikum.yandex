@@ -1,6 +1,7 @@
 import { TEvents } from '@/types/common';
 
 import Block from '@/utils/Block';
+import { addClass, inputHasValue, removeClass, setMessage } from '@/utils/helpers';
 import { getValidationMsg, isValid } from '@/utils/validation';
 
 import Input, { IInput } from '@/ui/elements/input/input';
@@ -36,7 +37,7 @@ class FormField extends Block {
   }
 
   onFocus(): void {
-    this.addClass(this.classes.hasValue);
+    if (this.element) addClass(this.classes.hasValue, this.element);
 
     if (this.input && this.props.validate) {
       this.validate(this.input);
@@ -44,8 +45,8 @@ class FormField extends Block {
   }
 
   onBlur(): void {
-    if (this.input && !this.checkValue(this.input)) {
-      this.removeClass(this.classes.hasValue);
+    if (this.element && this.input && !inputHasValue(this.input)) {
+      removeClass(this.classes.hasValue, this.element);
     }
 
     if (this.input && this.props.validate) {
@@ -55,30 +56,12 @@ class FormField extends Block {
 
   validate(input: HTMLInputElement): void {
     if (!isValid(input)) {
-      this.addClass(this.classes.hasError);
-      this.setErrorMsg(getValidationMsg(input));
+      if (this.element) addClass(this.classes.hasError, this.element);
+      if (this.message) setMessage(getValidationMsg(input), this.message);
     } else {
-      this.removeClass(this.classes.hasError);
-      this.setErrorMsg('');
+      if (this.element) removeClass(this.classes.hasValue, this.element);
+      if (this.message) setMessage('', this.message);
     }
-  }
-
-  setErrorMsg(msg: string): void {
-    if (this.message) this.message.innerText = msg;
-  }
-
-  addClass(cl: string): void {
-    this.element?.classList.add(cl);
-  }
-
-  removeClass(cl: string): void {
-    this.element?.classList.remove(cl);
-  }
-
-  checkValue(input: HTMLInputElement): boolean {
-    if (input.value) return true;
-
-    return false;
   }
 
   protected initChildren(): void {
