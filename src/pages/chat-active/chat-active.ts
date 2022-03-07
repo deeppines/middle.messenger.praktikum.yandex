@@ -15,7 +15,7 @@ class ChatPage extends Block {
     this.childrens.header = new Header();
 
     this.childrens.chats = new ChatList({
-      data: data,
+      items: data,
     });
 
     this.childrens.chatHeader = new ChatHeader();

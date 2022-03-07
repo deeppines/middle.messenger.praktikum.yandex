@@ -1,7 +1,7 @@
-import { METHOD } from '@/constants';
+import { Method } from '@/constants';
 
 export type Options = {
-  method: METHOD;
+  method: Method;
   data?: any;
 };
 

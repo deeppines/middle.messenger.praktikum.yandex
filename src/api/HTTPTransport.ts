@@ -1,26 +1,26 @@
 import { Options, OptionsWithoutMethod } from '@/types';
 
-import { METHOD } from '@/constants';
+import { Method } from '@/constants';
 
 class HTTPTransport {
   get(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.GET });
+    return this.request(url, { ...options, method: Method.GET });
   }
 
   post(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.POST });
+    return this.request(url, { ...options, method: Method.POST });
   }
 
   put(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.PUT });
+    return this.request(url, { ...options, method: Method.PUT });
   }
 
   delete(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.DELETE });
+    return this.request(url, { ...options, method: Method.DELETE });
   }
 
   patch(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.PATCH });
+    return this.request(url, { ...options, method: Method.PATCH });
   }
 
   request(url: string, options: Options): Promise<XMLHttpRequest> {
@@ -39,7 +39,7 @@ class HTTPTransport {
       xhr.onerror = reject;
       xhr.ontimeout = reject;
 
-      if (method === METHOD.GET || !data) {
+      if (method === Method.GET || !data) {
         xhr.send();
       } else {
         xhr.send(data);
