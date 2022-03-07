@@ -1,6 +1,6 @@
 # Pines Chat
 
-![Netlify](https://img.shields.io/netlify/a97a2c64-850e-4f5e-aabe-197c8eba4539?style=flat-square)
+![Netlify](https://img.shields.io/netlify/c5b4504e-ad65-42a5-a3c3-27421614fc84?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues-raw/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/deeppines/middle.messenger.praktikum.yandex?style=flat-square)
@@ -25,7 +25,7 @@ npm run start
 
 ## Netlify
 
-[Ссылка на Хостинг](https://awesome-borg-c5a7b1.netlify.app/)
+[Ссылка на Хостинг](https://competent-clarke-aa0ae8.netlify.app/)
 
 ## Макеты
 
@@ -33,4 +33,5 @@ npm run start
 
 ## Pull Request
 
-[Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)
+[Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)<br>
+[Ссылка для ревью - Sprint-2](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/2)
