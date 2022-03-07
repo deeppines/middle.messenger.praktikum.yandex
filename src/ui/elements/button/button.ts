@@ -7,6 +7,7 @@ interface IButton {
   name: string;
   text?: string;
   classes?: string;
+  block?: Block;
 }
 
 class Button extends Block {

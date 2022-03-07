@@ -1,5 +1,7 @@
 button.button(
-    type= type
-    name= name
-    class= classes
-  )= text
+  type= type
+  name= name
+  class= classes
+)= text
+  if block
+    | !{block}
