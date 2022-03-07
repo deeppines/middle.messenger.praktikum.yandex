@@ -1,9 +1,12 @@
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 
+import Icon from '@/ui/elements/icon/icon';
 import MessageForm from '@/ui/components/message-form/message-form';
 
 import template from './chat-footer.tpl.pug';
+
+import iconClip from '@/assets/icons/icon-clip.svg';
 
 class ChatFooter extends Block {
   protected initChildren() {
@@ -11,6 +14,12 @@ class ChatFooter extends Block {
       events: {
         submit: (e) => this.submitHandler(e),
       },
+    });
+
+    this.childrens.icon = new Icon({
+      id: iconClip,
+      width: 32,
+      height: 32,
     });
   }
 
