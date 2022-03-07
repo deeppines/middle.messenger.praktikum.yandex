@@ -15,6 +15,7 @@ export interface IInput {
   pattern?: string;
   events?: TEvents;
   validate?: boolean;
+  autocomplete?: 'on' | 'off';
 }
 
 class Input extends Block {
