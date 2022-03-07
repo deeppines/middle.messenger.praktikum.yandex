@@ -3,10 +3,12 @@ import { TEvents } from '@/types/common';
 import Block from '@/utils/Block';
 
 import Button from '@/ui/elements/button/button';
-import Input from '@/ui/elements/input/input';
 import Link from '@/ui/elements/link/link';
+import FormField from '@/ui/components/form-field/form-field';
 
 import template from './signup-form.tpl.pug';
+
+import { EMAIL, LOGIN, NAME, PASSWORD, PHONE } from '@/constants';
 
 interface ISignupForm {
   url: string;
@@ -20,46 +22,94 @@ class SignupForm extends Block {
   }
 
   protected initChildren(): void {
-    this.childrens.email = new Input({
-      type: 'email',
+    this.childrens.email = new FormField({
+      inputProps: {
+        type: 'email',
+        name: 'email',
+        required: true,
+        pattern: EMAIL,
+      },
+      label: 'Почта',
       name: 'email',
-      placeholder: 'Почта',
+      validate: true,
     });
 
-    this.childrens.login = new Input({
-      type: 'text',
+    this.childrens.login = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'login',
+        required: true,
+        minlength: 3,
+        maxlength: 20,
+        pattern: LOGIN,
+      },
+      label: 'Логин',
       name: 'login',
-      placeholder: 'Логин',
+      validate: true,
     });
 
-    this.childrens.firstName = new Input({
-      type: 'text',
+    this.childrens.firstName = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'first_name',
+        required: true,
+        pattern: NAME,
+      },
+      label: 'Имя',
       name: 'first_name',
-      placeholder: 'Имя',
+      validate: true,
     });
 
-    this.childrens.phone = new Input({
-      type: 'tel',
-      name: 'phone',
-      placeholder: 'Телефон',
-    });
-
-    this.childrens.password = new Input({
-      type: 'password',
-      name: 'password',
-      placeholder: 'Пароль',
-    });
-
-    this.childrens.passwordCheck = new Input({
-      type: 'password',
-      name: 'passwordCheck',
-      placeholder: 'Пароль (еще раз)',
-    });
-
-    this.childrens.secondName = new Input({
-      type: 'text',
+    this.childrens.secondName = new FormField({
+      inputProps: {
+        type: 'text',
+        name: 'second_name',
+        required: true,
+        pattern: NAME,
+      },
+      label: 'Фамилия',
       name: 'second_name',
-      placeholder: 'Фамилия',
+      validate: true,
+    });
+
+    this.childrens.phone = new FormField({
+      inputProps: {
+        type: 'tel',
+        name: 'phone',
+        required: true,
+        pattern: PHONE,
+      },
+      label: 'Телефон',
+      name: 'phone',
+      validate: true,
+    });
+
+    this.childrens.password = new FormField({
+      inputProps: {
+        type: 'password',
+        name: 'password',
+        required: true,
+        minlength: 8,
+        maxlength: 40,
+        pattern: PASSWORD,
+      },
+      label: 'Пароль',
+      name: 'password',
+      validate: true,
+    });
+
+    this.childrens.passwordCheck = new FormField({
+      inputProps: {
+        type: 'password',
+        name: 'passwordCheck',
+        required: true,
+        minlength: 8,
+        maxlength: 40,
+        pattern: PASSWORD,
+      },
+      label: 'Пароль (еще раз)',
+      name: 'passwordCheck',
+      validate: true,
     });
 
     this.childrens.link = new Link({
