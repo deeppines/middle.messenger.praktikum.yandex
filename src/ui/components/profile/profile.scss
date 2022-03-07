@@ -39,4 +39,11 @@
     text-align: center;
     color: $white;
   }
+
+  &__field {
+    .form-field__msg {
+      padding-top: 0;
+      text-align: right;
+    }
+  }
 }
