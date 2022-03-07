@@ -10,9 +10,10 @@ import template from './form-field.tpl.pug';
 
 interface IFormField {
   inputProps: IInput;
-  label: string;
-  name: string;
+  name?: string;
+  label?: string;
   validate?: boolean;
+  classes?: string;
   events?: TEvents;
 }
 
