@@ -13,7 +13,7 @@
   "scripts": {
     "start": "npm i && npm run build && node ./server.js",
     "dev": "parcel ./src/pages/**/*.html --port 3000",
-    "build": "npm i && parcel build ./src/pages/**/*.html --no-scope-hoist --no-source-maps --no-cache",
+    "build": "parcel build ./src/pages/*.html ./src/pages/**/*.html --no-scope-hoist --no-source-maps --no-cache",
     "lint": "tsc --noEmit && eslint --fix ./src/**/*.ts && npx stylelint ./src/**/*.scss --fix",
     "prepare": "husky install"
   },
