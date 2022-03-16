@@ -3,7 +3,8 @@
 }
 
 html,
-body {
+body,
+main {
   height: 100%;
 }
 
@@ -25,7 +26,8 @@ html {
 body {
   position: relative;
   display: block;
-  background-color: #fff;
+  background: $black-light;
+  color: $white;
 }
 
 button {
