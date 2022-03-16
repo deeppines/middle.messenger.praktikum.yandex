@@ -1,5 +1,6 @@
 import { IPage } from '@/types';
 
+import ClientErrorPage from '@/pages/404/404';
 import MessengerPage from '@/pages/messenger/messenger';
 import PasswordPage from '@/pages/password/password';
 import ProfilePage from '@/pages/profile/profile';
@@ -37,5 +38,10 @@ export const PAGES: IPage[] = [
     path: '/password',
     block: PasswordPage,
     props: { title: 'Профиль - пароль' },
+  },
+  {
+    path: '/404',
+    block: ClientErrorPage,
+    props: { title: 'Page Not Found - 404' },
   },
 ];

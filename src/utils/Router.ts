@@ -17,15 +17,15 @@ export default class Router {
     Router.__instance = this;
   }
 
-  public use(pathname: string | string[], block: typeof Block) {
+  public use(pathname: string | string[], block: typeof Block, props?: any) {
     if (Array.isArray(pathname)) {
       pathname.map((path) => {
-        const route = new Route(path, block, { rootQuery: APP_SELECTOR });
+        const route = new Route(path, block, { ...props, rootQuery: APP_SELECTOR });
 
         this.routes.push(route);
       });
     } else {
-      const route = new Route(pathname, block, { rootQuery: APP_SELECTOR });
+      const route = new Route(pathname, block, { ...props, rootQuery: APP_SELECTOR });
 
       this.routes.push(route);
     }
@@ -57,7 +57,12 @@ export default class Router {
   private _onRoute(pathname: string) {
     const route = this.getRoute(pathname);
 
-    if (!route) return;
+    if (!route) {
+      this.go('/404');
+
+      return;
+    }
+
     if (this.currentRoute) this.currentRoute.leave();
 
     this.currentRoute = route;
