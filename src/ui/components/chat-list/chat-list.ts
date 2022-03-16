@@ -12,6 +12,7 @@ class ChatList extends Block {
   constructor(props: IChatList) {
     super(props);
   }
+
   render() {
     return this.compile(template, { ...this.props });
   }

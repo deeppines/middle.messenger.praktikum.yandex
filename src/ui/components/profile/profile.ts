@@ -17,12 +17,12 @@ class Profile extends Block {
 
   protected initChildren() {
     this.childrens.changeInfoLink = new Link({
-      url: '/profile-change-info/profile-change-info.html',
+      url: '/settings',
       name: 'Изменить данные',
     });
 
     this.childrens.changePasswordLink = new Link({
-      url: '/profile-change-password/profile-change-password.html',
+      url: '/password',
       name: 'Изменить пароль',
     });
 

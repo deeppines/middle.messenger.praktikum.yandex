@@ -12,7 +12,7 @@ import arrowRight from '@/assets/icons/arrow-right.svg';
 class Header extends Block {
   protected initChildren() {
     this.childrens.link = new Link({
-      url: '/profile/profile.html',
+      url: '/profile',
       name: 'Профиль',
       mod: 'link--grey link--icon',
       block: new Icon({

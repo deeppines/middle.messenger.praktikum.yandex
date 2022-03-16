@@ -20,7 +20,7 @@ class ProfileChangeInfo extends Block {
 
   protected initChildren() {
     this.childrens.escLink = new Link({
-      url: '/profile/profile.html',
+      url: '/profile',
       name: 'Отмена',
     });
 
