@@ -1,6 +1,8 @@
 import Block from './Block';
 import Route from './Route';
 
+import { APP_SELECTOR } from '@/constants';
+
 export default class Router {
   private static __instance: Router;
   private routes: Route[] = [];
@@ -15,10 +17,18 @@ export default class Router {
     Router.__instance = this;
   }
 
-  public use(pathname: string, block: typeof Block) {
-    const route = new Route(pathname, block, { rootQuery: '#app' });
+  public use(pathname: string | string[], block: typeof Block) {
+    if (Array.isArray(pathname)) {
+      pathname.map((path) => {
+        const route = new Route(path, block, { rootQuery: APP_SELECTOR });
 
-    this.routes.push(route);
+        this.routes.push(route);
+      });
+    } else {
+      const route = new Route(pathname, block, { rootQuery: APP_SELECTOR });
+
+      this.routes.push(route);
+    }
 
     return this;
   }
