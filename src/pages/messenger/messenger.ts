@@ -1,12 +1,12 @@
 import Block from '@/utils/Block';
-import renderDOM from '@/utils/renderDOM';
 
 import ChatList from '@/ui/components/chat-list/chat-list';
 import Header from '@/ui/components/header/header';
 
-import template from './chat.tpl.pug';
 import { data } from './data';
-class ChatPage extends Block {
+import template from './messenger.tpl.pug';
+
+class MessengerPage extends Block {
   protected initChildren() {
     this.childrens.header = new Header();
 
@@ -20,8 +20,4 @@ class ChatPage extends Block {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = new ChatPage();
-
-  renderDOM('#app', page);
-});
+export default MessengerPage;

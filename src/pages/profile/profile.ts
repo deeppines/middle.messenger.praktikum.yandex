@@ -1,5 +1,4 @@
 import Block from '@/utils/Block';
-import renderDOM from '@/utils/renderDOM';
 
 import Icon from '@/ui/elements/icon/icon';
 import Profile from '@/ui/components/profile/profile';
@@ -26,8 +25,4 @@ class ProfilePage extends Block {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = new ProfilePage();
-
-  renderDOM('#app', page);
-});
+export default ProfilePage;

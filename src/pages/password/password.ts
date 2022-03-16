@@ -1,17 +1,16 @@
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
-import renderDOM from '@/utils/renderDOM';
 
 import Icon from '@/ui/elements/icon/icon';
-import ProfileChangeInfo from '@/ui/components/profile-change-info/profile-change-info';
+import ProfileChangePassword from '@/ui/components/profile-change-password/profile-change-password';
 
-import template from './profile-change-info.tpl.pug';
+import template from './password.tpl.pug';
 
 import arrowLeft from '@/assets/icons/arrow-left.svg';
 
-class ProfilePage extends Block {
+class PasswordPage extends Block {
   protected initChildren() {
-    this.childrens.profileChangeInfo = new ProfileChangeInfo({
+    this.childrens.profileChangePassword = new ProfileChangePassword({
       events: {
         submit: (e) => this.submitHandler(e),
       },
@@ -39,8 +38,4 @@ class ProfilePage extends Block {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = new ProfilePage();
-
-  renderDOM('#app', page);
-});
+export default PasswordPage;

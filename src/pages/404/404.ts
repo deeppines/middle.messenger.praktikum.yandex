@@ -1,9 +1,8 @@
 import Block from '@/utils/Block';
-import renderDOM from '@/utils/renderDOM';
 
 import template from './404.tpl.pug';
 
-class ErrorPage extends Block {
+class ClientErrorPage extends Block {
   constructor() {
     super();
   }
@@ -13,8 +12,4 @@ class ErrorPage extends Block {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = new ErrorPage();
-
-  renderDOM('#app', page);
-});
+export default ClientErrorPage;
