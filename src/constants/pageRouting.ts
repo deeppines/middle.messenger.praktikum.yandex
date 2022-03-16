@@ -7,7 +7,7 @@ import SettingsPage from '@/pages/settings/settings';
 import SigninPage from '@/pages/signin/signin';
 import SignupPage from '@/pages/signup/signup';
 
-export const pages: IPage[] = [
+export const PAGES: IPage[] = [
   {
     path: ['/', '/signin'],
     block: SigninPage,
