@@ -113,7 +113,7 @@ class SignupForm extends Block {
     });
 
     this.childrens.link = new Link({
-      url: '/signin/signin.html',
+      url: '/signin',
       name: 'Войти',
     });
 
