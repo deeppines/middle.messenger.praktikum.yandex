@@ -1,6 +1,5 @@
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
-import renderDOM from '@/utils/renderDOM';
 
 import SigninForm from '@/ui/components/form/signin-form/signin-form';
 
@@ -32,8 +31,4 @@ class SigninPage extends Block {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const page = new SigninPage();
-
-  renderDOM('#app', page);
-});
+export default SigninPage;
