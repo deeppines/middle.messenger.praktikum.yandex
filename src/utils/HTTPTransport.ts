@@ -42,7 +42,7 @@ class HTTPTransport {
       if (method === Method.GET || !data) {
         xhr.send();
       } else {
-        xhr.send(data);
+        xhr.send(JSON.stringify(data));
       }
     });
   }
