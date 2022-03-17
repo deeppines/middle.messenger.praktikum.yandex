@@ -1,3 +1,5 @@
+import { Indexed } from '@/types';
+
 export const addClass = (cl: string, el: HTMLElement | null): void => {
   if (el) el.classList.add(cl);
 };
@@ -49,3 +51,64 @@ export const isEqual = (a: Record<string, unknown>, b: Record<string, unknown>):
 export const updatePageTitle = (title: string): void => {
   document.title = title;
 };
+
+export const isObject = (item: Indexed<any> | undefined): boolean => {
+  if (!item) return false;
+
+  return item && typeof item === 'object' && !Array.isArray(item);
+};
+
+export const merge = (lhs: Indexed<any>, rhs: Indexed<any>): Indexed<any> => {
+  if (!rhs) return lhs;
+
+  const rhsArr: Indexed<any>[] = [rhs];
+
+  if (!rhsArr.length) return lhs;
+
+  const src = rhsArr.shift();
+
+  if (isObject(lhs) && isObject(src)) {
+    for (const key in src) {
+      if (isObject(src[key])) {
+        if (!lhs[key]) {
+          Object.assign(lhs, {
+            [key]: {},
+          });
+        }
+
+        merge(lhs[key], src[key]);
+      } else {
+        Object.assign(lhs, {
+          [key]: src[key],
+        });
+      }
+    }
+  }
+
+  return rhsArr[0] ? merge(lhs, rhsArr[0]) : lhs;
+}
+
+export const createNestedObj = (source: Indexed<any>, target = {}): Indexed<any> => {
+  const result = Object.entries(source).reduce((obj: Indexed<any>, [k, v]) => {
+    const path = k.split('.');
+    const prop = path.pop();
+
+    if (prop) {
+      path.reduce((acc, n: string) => (acc[n] = acc[n] || {}), obj)[prop] = v;
+    }
+
+    return obj;
+  }, target);
+
+  return result;
+};
+
+export const set = (object: Indexed<any>, path: string, value: unknown): Indexed<any> => {
+  if (typeof path !== 'string') throw new Error('path must be string');
+  if (!isObject(object)) return object;
+
+  const baseObject = { [path]: value };
+  const newObject = createNestedObj(baseObject);
+
+  return merge(object, newObject);
+}
