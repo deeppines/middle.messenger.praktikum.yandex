@@ -1,7 +1,7 @@
 import { IUser } from '@/types';
 
 import Block from '@/utils/Block';
-import { getProfileItems } from '@/utils/helpers';
+import { getProfileItems } from '@/utils/getProfileItems';
 
 import Link from '@/ui/elements/link/link';
 

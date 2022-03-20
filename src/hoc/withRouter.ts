@@ -1,5 +1,6 @@
 import Block from '@/utils/Block';
-import Router from '@/utils/Router';
+
+import Router from '@/router/Router';
 
 function withRouter(Component: typeof Block) {
   return class WithRouter extends Component {

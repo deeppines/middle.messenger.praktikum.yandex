@@ -1,4 +1,5 @@
-import Block from './Block';
+import Block from '../utils/Block';
+
 import Route from './Route';
 
 import { APP_SELECTOR } from '@/constants';

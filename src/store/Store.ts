@@ -1,7 +1,7 @@
 import { IUser } from '@/types';
 
-import EventBus from './EventBus';
-import { set } from './helpers';
+import EventBus from '../utils/EventBus';
+import { set } from '../utils/helpers';
 
 export enum StoreEvents {
   Updated = 'updated',

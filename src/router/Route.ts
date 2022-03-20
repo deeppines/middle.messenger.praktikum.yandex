@@ -1,6 +1,6 @@
-import Block from './Block';
-import { updatePageTitle } from './helpers';
-import renderDOM from './renderDOM';
+import Block from '../utils/Block';
+import renderDOM from '../utils/renderDOM';
+import { updatePageTitle } from '../utils/updatePageTitle';
 
 export default class Route {
   private pathname: string;

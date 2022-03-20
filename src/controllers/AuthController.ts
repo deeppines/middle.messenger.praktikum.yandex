@@ -2,7 +2,7 @@ import { ISignInData, ISignUpFormData } from '@/types';
 
 import AuthAPI from '@/api/AuthAPI';
 
-import Store from '@/utils/Store';
+import Store from '@/store/Store';
 
 class AuthController {
   private api: AuthAPI;
