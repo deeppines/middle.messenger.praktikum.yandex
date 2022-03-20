@@ -2,7 +2,7 @@ import Block from '../utils/Block';
 
 import Route from './Route';
 
-import { APP_SELECTOR } from '@/constants';
+import { APP_SELECTOR, PagePaths } from '@/constants';
 
 class Router {
   private static __instance: Router;
@@ -59,7 +59,7 @@ class Router {
     const route = this.getRoute(pathname);
 
     if (!route) {
-      this.go('/404');
+      this.go(PagePaths.NotFound);
 
       return;
     }

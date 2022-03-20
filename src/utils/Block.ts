@@ -63,16 +63,16 @@ class Block {
 
   private _componentDidUpdate(oldProps: any, newProps: any) {
     const response = this.componentDidUpdate(oldProps, newProps);
-    if (!response) {
-      return;
-    }
+
+    if (!response) return;
+
     this._render();
   }
 
   protected componentDidUpdate(oldProps: any, newProps: any) {
     if (!isEqual(oldProps, newProps)) return true;
 
-    return;
+    return false;
   }
 
   public setProps = (nextProps: any) => {

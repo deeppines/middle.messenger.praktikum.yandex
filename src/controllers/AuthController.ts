@@ -6,7 +6,7 @@ import { getPathname } from '@/utils/getPathname';
 
 import { PagePaths } from '@/constants';
 import router from '@/router/Router';
-import Store from '@/store/Store';
+import store from '@/store/Store';
 
 class AuthController {
   private api: AuthAPI;
@@ -42,7 +42,7 @@ class AuthController {
     try {
       const user = await this.api.user();
 
-      Store.set('currentUser', user);
+      store.set('currentUser', user);
 
       switch (path) {
         case PagePaths.Signin:
@@ -69,7 +69,7 @@ class AuthController {
   async logout() {
     await this.api.logout();
 
-    router.go('/');
+    router.go(PagePaths.Index);
   }
 }
 
