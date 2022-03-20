@@ -74,13 +74,3 @@ export default class Router {
     return this.routes.find((route) => route.match(pathname));
   }
 }
-
-export function withRouter(Component: typeof Block) {
-  return class WithRouter extends Component {
-    public static componentName = Component.name;
-
-    constructor(props: any) {
-      super({ ...props, router: new Router() });
-    }
-  };
-}
