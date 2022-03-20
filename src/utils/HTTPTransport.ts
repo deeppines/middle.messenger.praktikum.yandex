@@ -1,29 +1,36 @@
 import { Options, OptionsWithoutMethod } from '@/types';
 
-import { Method } from '@/constants';
+import { BASE_URL, Method } from '@/constants';
 
 class HTTPTransport {
-  get(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: Method.GET });
+  static API_URL = BASE_URL;
+  protected endpoint: string;
+
+  constructor(endpoint: string) {
+    this.endpoint = `${HTTPTransport.API_URL}${endpoint}`;
   }
 
-  post(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: Method.POST });
+  public get(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+    return this.request(`${this.endpoint}${path}`, { ...options, method: Method.GET });
   }
 
-  put(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: Method.PUT });
+  public post(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+    return this.request(`${this.endpoint}${path}`, { ...options, method: Method.POST });
   }
 
-  delete(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: Method.DELETE });
+  public put(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+    return this.request(`${this.endpoint}${path}`, { ...options, method: Method.PUT });
   }
 
-  patch(url: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: Method.PATCH });
+  public delete(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+    return this.request(`${this.endpoint}${path}`, { ...options, method: Method.DELETE });
   }
 
-  request(url: string, options: Options): Promise<XMLHttpRequest> {
+  public patch(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+    return this.request(`${this.endpoint}${path}`, { ...options, method: Method.PATCH });
+  }
+
+  private request(url: string, options: Options): Promise<XMLHttpRequest> {
     const { method, data } = options;
 
     return new Promise((resolve, reject) => {
@@ -31,13 +38,21 @@ class HTTPTransport {
 
       xhr.open(method, url);
 
-      xhr.onload = function () {
-        resolve(xhr);
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status < 400) resolve(xhr.response);
+
+          reject(xhr.response);
+        }
       };
 
-      xhr.onabort = reject;
-      xhr.onerror = reject;
-      xhr.ontimeout = reject;
+      xhr.onabort = () => reject({ reason: 'abort' });
+      xhr.onerror = () => reject({ reason: 'network error' });
+      xhr.ontimeout = () => reject({ reason: 'timeout' });
+
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.withCredentials = true;
+      xhr.responseType = 'json';
 
       if (method === Method.GET || !data) {
         xhr.send();
