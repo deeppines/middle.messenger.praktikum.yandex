@@ -1,3 +1,5 @@
+import { TEvents } from '@/types';
+
 import Block from '@/utils/Block';
 
 import template from './button.tpl.pug';
@@ -8,6 +10,7 @@ interface IButton {
   text?: string;
   classes?: string;
   block?: Block;
+  events?: TEvents;
 }
 
 class Button extends Block {
