@@ -1,5 +1,3 @@
-import { IUser } from '@/types';
-
 import Block from '@/utils/Block';
 
 import Icon from '@/ui/elements/icon/icon';
@@ -11,10 +9,6 @@ import arrowLeft from '@/assets/icons/arrow-left.svg';
 import withStore from '@/hoc/withStore';
 import { IState } from '@/store/Store';
 class ProfilePage extends Block {
-  constructor(props: IUser) {
-    super(props);
-  }
-
   protected initChildren() {
     this.childrens.profile = new Profile(this.props);
 
@@ -26,7 +20,7 @@ class ProfilePage extends Block {
   }
 
   render() {
-    return this.compile(template, { ...this.props });
+    return this.compile(template, {});
   }
 }
 
