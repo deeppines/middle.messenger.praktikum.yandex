@@ -1,4 +1,5 @@
 import EventBus from './EventBus';
+import { isEqual } from './helpers';
 
 import { nanoid } from 'nanoid';
 
@@ -69,8 +70,7 @@ class Block {
   }
 
   protected componentDidUpdate(oldProps: any, newProps: any) {
-    // TODO: переделать на глубокое сравнение в 3 спринте
-    if (oldProps !== newProps) return true;
+    if (!isEqual(oldProps, newProps)) return true;
 
     return;
   }
