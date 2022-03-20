@@ -9,6 +9,7 @@ import FormField from '@/ui/components/form-field/form-field';
 import template from './profile-change-info.tpl.pug';
 
 import { EMAIL, LOGIN, NAME, PHONE } from '@/constants';
+import { withUser } from '@/hoc/withUser';
 
 interface IProfileChangeInfo {
   events?: TEvents;
@@ -106,8 +107,8 @@ class ProfileChangeInfo extends Block {
   }
 
   render() {
-    return this.compile(template, {});
+    return this.compile(template, { ...this.props });
   }
 }
 
-export default ProfileChangeInfo;
+export default withUser(ProfileChangeInfo);

@@ -1,3 +1,5 @@
+import { IUser } from '@/types';
+
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 
@@ -7,12 +9,13 @@ import ProfileChangeInfo from '@/ui/components/profile-change-info/profile-chang
 import template from './settings.tpl.pug';
 
 import arrowLeft from '@/assets/icons/arrow-left.svg';
+import UserController from '@/controllers/UserController';
 
 class SettingsPage extends Block {
   protected initChildren() {
     this.childrens.profileChangeInfo = new ProfileChangeInfo({
       events: {
-        submit: (e) => this.submitHandler(e),
+        submit: (e: Event) => this.submitHandler(e),
       },
     });
 
@@ -28,9 +31,9 @@ class SettingsPage extends Block {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const data = formDataToObject(formData);
 
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(formDataToObject(formData));
+    UserController.updateProfile(data as unknown as IUser);
   }
 
   render() {
