@@ -7,19 +7,19 @@ export default class AuthAPI extends BaseAPI {
     super('/auth');
   }
 
-  signUp(data: ISignUpData): Promise<unknown> {
+  signUp(data: ISignUpData): Promise<XMLHttpRequestResponseType> {
     return this.http.post('/signup', { data });
   }
 
-  signIn(data: ISignInData): Promise<unknown> {
+  signIn(data: ISignInData): Promise<XMLHttpRequestResponseType> {
     return this.http.post('/signin', { data });
   }
 
-  user(): Promise<unknown> {
+  user(): Promise<XMLHttpRequestResponseType> {
     return this.http.get('/user');
   }
 
-  logout(): Promise<unknown> {
+  logout(): Promise<XMLHttpRequestResponseType> {
     return this.http.post('/logout');
   }
 

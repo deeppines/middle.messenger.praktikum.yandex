@@ -10,27 +10,42 @@ class HTTPTransport {
     this.endpoint = `${HTTPTransport.API_URL}${endpoint}`;
   }
 
-  public get(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+  public get(
+    path: string,
+    options: OptionsWithoutMethod = {}
+  ): Promise<XMLHttpRequestResponseType> {
     return this.request(`${this.endpoint}${path}`, { ...options, method: Method.GET });
   }
 
-  public post(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+  public post(
+    path: string,
+    options: OptionsWithoutMethod = {}
+  ): Promise<XMLHttpRequestResponseType> {
     return this.request(`${this.endpoint}${path}`, { ...options, method: Method.POST });
   }
 
-  public put(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+  public put(
+    path: string,
+    options: OptionsWithoutMethod = {}
+  ): Promise<XMLHttpRequestResponseType> {
     return this.request(`${this.endpoint}${path}`, { ...options, method: Method.PUT });
   }
 
-  public delete(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+  public delete(
+    path: string,
+    options: OptionsWithoutMethod = {}
+  ): Promise<XMLHttpRequestResponseType> {
     return this.request(`${this.endpoint}${path}`, { ...options, method: Method.DELETE });
   }
 
-  public patch(path: string, options: OptionsWithoutMethod = {}): Promise<XMLHttpRequest> {
+  public patch(
+    path: string,
+    options: OptionsWithoutMethod = {}
+  ): Promise<XMLHttpRequestResponseType> {
     return this.request(`${this.endpoint}${path}`, { ...options, method: Method.PATCH });
   }
 
-  private request(url: string, options: Options): Promise<XMLHttpRequest> {
+  private request(url: string, options: Options): Promise<XMLHttpRequestResponseType> {
     const { method, data } = options;
 
     return new Promise((resolve, reject) => {
