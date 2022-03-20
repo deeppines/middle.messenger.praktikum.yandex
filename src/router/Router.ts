@@ -4,7 +4,7 @@ import Route from './Route';
 
 import { APP_SELECTOR } from '@/constants';
 
-export default class Router {
+class Router {
   private static __instance: Router;
   private routes: Route[] = [];
   private history = window.history;
@@ -75,3 +75,7 @@ export default class Router {
     return this.routes.find((route) => route.match(pathname));
   }
 }
+
+const router = new Router();
+
+export default router;
