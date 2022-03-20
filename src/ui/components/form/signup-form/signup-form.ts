@@ -11,8 +11,6 @@ import template from './signup-form.tpl.pug';
 import { EMAIL, LOGIN, NAME, PASSWORD, PHONE } from '@/constants';
 
 interface ISignupForm {
-  url: string;
-  method: string;
   events?: TEvents;
 }
 

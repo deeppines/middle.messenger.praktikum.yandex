@@ -117,10 +117,7 @@ export const getProfileItems = (props: IUser): IProfileItem[] => {
   const items: IProfileItem[] = [];
 
   const addItem = (name: string, value: string) => {
-    items.push({
-      name,
-      value,
-    });
+    items.push({ name, value });
   };
 
   Object.keys(props).forEach((key) => {
