@@ -6,11 +6,9 @@ import Profile from '@/ui/components/profile/profile';
 import template from './profile.tpl.pug';
 
 import arrowLeft from '@/assets/icons/arrow-left.svg';
-import withStore from '@/hoc/withStore';
-import { IState } from '@/store/Store';
 class ProfilePage extends Block {
   protected initChildren() {
-    this.childrens.profile = new Profile(this.props);
+    this.childrens.profile = new Profile({});
 
     this.childrens.icon = new Icon({
       id: arrowLeft,
@@ -24,4 +22,4 @@ class ProfilePage extends Block {
   }
 }
 
-export default withStore((state: IState) => ({ ...state.currentUser }))(ProfilePage);
+export default ProfilePage;

@@ -1,17 +1,15 @@
-import { IUser } from '@/types';
-
 import Block from '@/utils/Block';
 import { getProfileItems } from '@/utils/getProfileItems';
 
+import Button from '@/ui/elements/button/button';
 import Link from '@/ui/elements/link/link';
 
 import template from './profile.tpl.pug';
 
-class Profile extends Block {
-  constructor(props: IUser) {
-    super(props);
-  }
+import AuthController from '@/controllers/AuthController';
+import { withUser } from '@/hoc/withUser';
 
+class Profile extends Block {
   protected initChildren() {
     this.childrens.changeInfoLink = new Link({
       url: '/settings',
@@ -23,10 +21,14 @@ class Profile extends Block {
       name: 'Изменить пароль',
     });
 
-    this.childrens.exitLink = new Link({
-      url: '/',
-      name: 'Выйти',
-      mod: 'link--red',
+    this.childrens.exitLink = new Button({
+      type: 'button',
+      name: 'logout',
+      text: 'Выйти',
+      classes: 'button--link button--link-red',
+      events: {
+        click: () => AuthController.logout(),
+      },
     });
   }
 
@@ -38,4 +40,4 @@ class Profile extends Block {
   }
 }
 
-export default Profile;
+export default withUser(Profile);
