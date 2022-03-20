@@ -1,17 +1,22 @@
+import { IUser } from '@/types';
+
 import Block from '@/utils/Block';
+import { IState } from '@/utils/Store';
 
 import Icon from '@/ui/elements/icon/icon';
 import Profile from '@/ui/components/profile/profile';
 
-import { profileInfo } from './data';
 import template from './profile.tpl.pug';
 
 import arrowLeft from '@/assets/icons/arrow-left.svg';
+import withStore from '@/hoc/withStore';
 class ProfilePage extends Block {
+  constructor(props: IUser) {
+    super(props);
+  }
+
   protected initChildren() {
-    this.childrens.profile = new Profile({
-      data: profileInfo,
-    });
+    this.childrens.profile = new Profile(this.props);
 
     this.childrens.icon = new Icon({
       id: arrowLeft,
@@ -21,8 +26,8 @@ class ProfilePage extends Block {
   }
 
   render() {
-    return this.compile(template, {});
+    return this.compile(template, { ...this.props });
   }
 }
 
-export default ProfilePage;
+export default withStore((state: IState) => ({ ...state.currentUser }))(ProfilePage);

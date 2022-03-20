@@ -4,10 +4,10 @@ include ../profile-item/profile-item
   .profile__header
     .profile__img
       
-    h1.profile__title= 'Иван'
+    h1.profile__title= `${first_name} ${second_name}`
   .profile__main
-    if data
-      each item in data
+    if items
+      each item in items
         +profileItem(item.name, item.value)
   .profile__footer
     +profileItem()

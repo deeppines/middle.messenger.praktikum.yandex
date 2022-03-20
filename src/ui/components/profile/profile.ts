@@ -1,17 +1,14 @@
-import { IProfileItem } from '@/types';
+import { IUser } from '@/types';
 
 import Block from '@/utils/Block';
+import { getProfileItems } from '@/utils/helpers';
 
 import Link from '@/ui/elements/link/link';
 
 import template from './profile.tpl.pug';
 
-interface IProfile {
-  data: IProfileItem[];
-}
-
 class Profile extends Block {
-  constructor(props: IProfile) {
+  constructor(props: IUser) {
     super(props);
   }
 
@@ -34,7 +31,10 @@ class Profile extends Block {
   }
 
   render() {
-    return this.compile(template, { ...this.props });
+    return this.compile(template, {
+      items: getProfileItems(this.props),
+      ...this.props,
+    });
   }
 }
 
