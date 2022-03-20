@@ -1,4 +1,4 @@
-import { Indexed } from '@/types';
+import { Indexed, IProfileItem, IUser } from '@/types';
 
 export const addClass = (cl: string, el: HTMLElement | null): void => {
   if (el) el.classList.add(cl);
@@ -86,7 +86,7 @@ export const merge = (lhs: Indexed<any>, rhs: Indexed<any>): Indexed<any> => {
   }
 
   return rhsArr[0] ? merge(lhs, rhsArr[0]) : lhs;
-}
+};
 
 export const createNestedObj = (source: Indexed<any>, target = {}): Indexed<any> => {
   const result = Object.entries(source).reduce((obj: Indexed<any>, [k, v]) => {
@@ -111,4 +111,26 @@ export const set = (object: Indexed<any>, path: string, value: unknown): Indexed
   const newObject = createNestedObj(baseObject);
 
   return merge(object, newObject);
-}
+};
+
+export const getProfileItems = (props: IUser): IProfileItem[] => {
+  const items: IProfileItem[] = [];
+
+  const addItem = (name: string, value: string) => {
+    items.push({
+      name,
+      value,
+    });
+  };
+
+  Object.keys(props).forEach((key) => {
+    if (key === 'email') addItem('Почта', props[key]);
+    if (key === 'login') addItem('Логин', props[key]);
+    if (key === 'first_name') addItem('Имя', props[key]);
+    if (key === 'second_name') addItem('Фамилия', props[key]);
+    if (key === 'display_name') addItem('Имя в чате', props[key]);
+    if (key === 'phone') addItem('Телефон', props[key]);
+  });
+
+  return items;
+};
