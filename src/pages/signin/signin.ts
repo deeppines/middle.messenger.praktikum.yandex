@@ -1,3 +1,5 @@
+import { ISignInData } from '@/types';
+
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 
@@ -5,11 +7,11 @@ import SigninForm from '@/ui/components/form/signin-form/signin-form';
 
 import template from './signin.tpl.pug';
 
+import AuthController from '@/controllers/AuthController';
+
 class SigninPage extends Block {
   protected initChildren() {
     this.childrens.form = new SigninForm({
-      url: '#',
-      method: 'POST',
       events: {
         submit: (e) => this.submitHandler(e),
       },
@@ -21,9 +23,9 @@ class SigninPage extends Block {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const data = formDataToObject(formData);
 
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(formDataToObject(formData));
+    AuthController.signIn(data as unknown as ISignInData);
   }
 
   render() {

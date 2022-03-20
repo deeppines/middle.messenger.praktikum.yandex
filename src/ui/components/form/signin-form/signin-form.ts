@@ -11,8 +11,6 @@ import template from './signin-form.tpl.pug';
 import { LOGIN, PASSWORD } from '@/constants';
 
 interface ISigninForm {
-  url: string;
-  method: string;
   events?: TEvents;
 }
 
