@@ -1,4 +1,5 @@
 import Block from '@/utils/Block';
+import { getAvatarPlug } from '@/utils/getAvatarPlug';
 import { getProfileItems } from '@/utils/getProfileItems';
 
 import Button from '@/ui/elements/button/button';
@@ -35,6 +36,7 @@ class Profile extends Block {
   render() {
     return this.compile(template, {
       items: getProfileItems(this.props),
+      plug: getAvatarPlug(this.props),
       ...this.props,
     });
   }

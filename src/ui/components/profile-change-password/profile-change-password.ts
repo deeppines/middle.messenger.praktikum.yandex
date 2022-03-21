@@ -1,6 +1,7 @@
 import { TEvents } from '@/types/common';
 
 import Block from '@/utils/Block';
+import { getAvatarPlug } from '@/utils/getAvatarPlug';
 
 import Button from '@/ui/elements/button/button';
 import Link from '@/ui/elements/link/link';
@@ -9,6 +10,7 @@ import FormField from '@/ui/components/form-field/form-field';
 import template from './profile-change-password.tpl.pug';
 
 import { PASSWORD } from '@/constants';
+import { withUser } from '@/hoc/withUser';
 
 interface IProfileChangePassword {
   events?: TEvents;
@@ -74,8 +76,11 @@ class ProfileChangePassword extends Block {
   }
 
   render() {
-    return this.compile(template, {});
+    return this.compile(template, {
+      plug: getAvatarPlug(this.props),
+      ...this.props,
+    });
   }
 }
 
-export default ProfileChangePassword;
+export default withUser(ProfileChangePassword);

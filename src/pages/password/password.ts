@@ -15,7 +15,7 @@ class PasswordPage extends Block {
   protected initChildren() {
     this.childrens.profileChangePassword = new ProfileChangePassword({
       events: {
-        submit: (e) => this.submitHandler(e),
+        submit: (e: Event) => this.submitHandler(e),
       },
     });
 

@@ -1,6 +1,7 @@
 import { TEvents } from '@/types/common';
 
 import Block from '@/utils/Block';
+import { getAvatarPlug } from '@/utils/getAvatarPlug';
 
 import Button from '@/ui/elements/button/button';
 import Link from '@/ui/elements/link/link';
@@ -107,7 +108,10 @@ class ProfileChangeInfo extends Block {
   }
 
   render() {
-    return this.compile(template, { ...this.props });
+    return this.compile(template, {
+      plug: getAvatarPlug(this.props),
+      ...this.props,
+    });
   }
 }
 
