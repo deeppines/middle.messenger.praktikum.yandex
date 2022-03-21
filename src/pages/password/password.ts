@@ -1,3 +1,5 @@
+import { IPasswordFormData } from '@/types';
+
 import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 
@@ -7,6 +9,7 @@ import ProfileChangePassword from '@/ui/components/profile-change-password/profi
 import template from './password.tpl.pug';
 
 import arrowLeft from '@/assets/icons/arrow-left.svg';
+import UserController from '@/controllers/UserController';
 
 class PasswordPage extends Block {
   protected initChildren() {
@@ -28,9 +31,9 @@ class PasswordPage extends Block {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const data = formDataToObject(formData);
 
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(formDataToObject(formData));
+    UserController.updatePassword(data as unknown as IPasswordFormData);
   }
 
   render() {

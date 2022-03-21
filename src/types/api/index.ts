@@ -36,3 +36,7 @@ export interface IPasswordData {
   oldPassword: string;
   newPassword: string;
 }
+
+export interface IPasswordFormData extends IPasswordData {
+  passwordCheck: string;
+}

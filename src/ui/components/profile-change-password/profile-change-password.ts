@@ -33,7 +33,7 @@ class ProfileChangePassword extends Block {
     this.childrens.oldPassword = new FormField({
       inputProps: {
         type: 'password',
-        name: 'password',
+        name: 'oldPassword',
         placeholder: '•••••••••',
         required: true,
         minlength: 8,
@@ -61,7 +61,7 @@ class ProfileChangePassword extends Block {
     this.childrens.newPasswordRepeat = new FormField({
       inputProps: {
         type: 'password',
-        name: 'newPassword',
+        name: 'passwordCheck',
         placeholder: '•••••••••••',
         required: true,
         minlength: 8,
