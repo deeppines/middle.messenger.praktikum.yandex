@@ -14,7 +14,9 @@ class ChangeAvatar extends Block {
   }
 
   protected render(): DocumentFragment {
-    return this.compile(template, {});
+    return this.compile(template, {
+      id: 'changeAvatar',
+    });
   }
 }
 

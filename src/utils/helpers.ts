@@ -108,3 +108,20 @@ export const set = (object: Indexed<any>, path: string, value: unknown): Indexed
 
   return merge(object, newObject);
 };
+
+export const openModal = (id: string): void => {
+  const modal = document.getElementById(id);
+
+  if (!modal) return;
+
+  addClass('active', modal);
+};
+
+export const closeModal = (event: Event, id: string): void => {
+  const target = event.target;
+  const modal = document.getElementById(id);
+
+  if (!modal) return;
+
+  if (target === modal) removeClass('active', modal);
+};

@@ -4,6 +4,7 @@ include ../profile-item/profile-item
   .profile__header
     .profile__img
       span.profile__img-plug= plug
+      | !{changeAvatarButton}
     h1.profile__title= `${first_name} ${second_name}`
   .profile__main
     if items

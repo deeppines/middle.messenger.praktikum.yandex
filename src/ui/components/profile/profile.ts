@@ -1,6 +1,7 @@
 import Block from '@/utils/Block';
 import { getAvatarPlug } from '@/utils/getAvatarPlug';
 import { getProfileItems } from '@/utils/getProfileItems';
+import { openModal } from '@/utils/helpers';
 
 import Button from '@/ui/elements/button/button';
 import Link from '@/ui/elements/link/link';
@@ -20,6 +21,16 @@ class Profile extends Block {
     this.childrens.changePasswordLink = new Link({
       url: '/password',
       name: 'Изменить пароль',
+    });
+
+    this.childrens.changeAvatarButton = new Button({
+      type: 'button',
+      name: 'changeAvatar',
+      text: 'Поменять аватар',
+      classes: 'button--avatar',
+      events: {
+        click: () => openModal('changeAvatar'),
+      },
     });
 
     this.childrens.exitLink = new Button({
