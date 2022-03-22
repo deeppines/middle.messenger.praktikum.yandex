@@ -5,6 +5,8 @@ include ../profile-item/profile-item
     .profile__img
       span.profile__img-plug= plug
       | !{changeAvatarButton}
+      if avatar
+        img(src= `https://ya-praktikum.tech/api/v2/resources${avatar}`, alt="avatar")
     h1.profile__title= `${first_name} ${second_name}`
   .profile__main
     if items
