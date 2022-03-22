@@ -117,11 +117,12 @@ export const openModal = (id: string): void => {
   addClass('active', modal);
 };
 
-export const closeModal = (event: Event, id: string): void => {
-  const target = event.target;
+export const closeModal = (id: string, event?: Event): void => {
+  const target = event ? event.target : null;
   const modal = document.getElementById(id);
 
   if (!modal) return;
 
   if (target === modal) removeClass('active', modal);
+  if (target === null) removeClass('active', modal);
 };
