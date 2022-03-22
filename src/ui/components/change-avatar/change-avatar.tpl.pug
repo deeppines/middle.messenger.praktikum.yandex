@@ -3,4 +3,11 @@ include ../modal/modal.pug
 - var modalTitle = 'Загрузите файл'
 
 .change-avatar(id= id)
-  +modal(modalTitle)= 'test'
+  +modal(modalTitle)
+    form.form.form--avatar
+      .form__body
+        .form__row
+          | !{file}
+      .form__footer
+        .form__row
+          | !{button}

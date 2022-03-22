@@ -31,4 +31,40 @@
       color: $red;
     }
   }
+
+  &--file {
+    input {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .form-field__label {
+      position: relative;
+      top: auto;
+      display: inline-block;
+      padding: 0 70px;
+      text-align: center;
+      text-decoration: underline;
+      line-height: 1.2;
+      color: $blue;
+
+      &.hasFile {
+        text-decoration: none;
+        color: $grey2;
+      }
+    }
+
+    &.hasValue {
+      .form-field__label {
+        font-size: 13px;
+        line-height: 1.2;
+        top: auto;
+      }
+    }
+  }
 }
