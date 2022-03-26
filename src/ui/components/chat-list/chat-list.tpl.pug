@@ -4,3 +4,5 @@ nav.chat-list
   if items
     each item in items
       +chatListItem(item)
+  div.chat-list__footer
+    | !{addChat}

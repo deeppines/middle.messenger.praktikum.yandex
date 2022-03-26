@@ -2,14 +2,15 @@ mixin chatListItem(data)
   buttun(
     type="button"
     name="chat"
+    id= data.id
     class=data.active ? 'chat-list__item chat-list__item--active' : 'chat-list__item'
   )
     .chat-list__item-img
     .chat-list__item-main
       .chat-list__item-title= data.title
-      .chat-list__item-preview= data.preview
+      .chat-list__item-preview= data.last_message.content
     .chat-list__item-info
-      .chat-list__item-date= data.date
-      if data.count
+      .chat-list__item-date= data.last_message.time
+      if data.unread_count
         .chat-list__item-counter
-          span= data.count
+          span= data.unread_count
