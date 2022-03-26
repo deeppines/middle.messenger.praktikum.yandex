@@ -3,7 +3,7 @@ import { IProfileItem, IUser } from '@/types';
 export const getProfileItems = (props: IUser): IProfileItem[] => {
   const items: IProfileItem[] = [];
 
-  const addItem = (name: string, value: string) => {
+  const addItem = (name: string, value?: string) => {
     items.push({ name, value });
   };
 

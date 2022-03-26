@@ -1,6 +1,13 @@
+import { IUser } from '../user';
+
 export interface IChatItem {
+  id: number;
   title: string;
-  preview: string;
-  date: string;
-  count: string;
+  avatar: string;
+  unread_count: number;
+  last_message?: {
+    user: IUser;
+    time: string;
+    content: string;
+  };
 }

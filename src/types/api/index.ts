@@ -21,17 +21,6 @@ export interface ISignInData {
   password: string;
 }
 
-export interface IUser {
-  first_name: string;
-  second_name: string;
-  display_name: string;
-  login: string;
-  email: string;
-  phone: string;
-  id?: number;
-  avatar?: string;
-}
-
 export interface IPasswordData {
   oldPassword: string;
   newPassword: string;
