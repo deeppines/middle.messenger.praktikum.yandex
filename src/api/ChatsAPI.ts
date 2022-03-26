@@ -1,4 +1,4 @@
-import { Indexed } from '@/types';
+import { IChatCreate, Indexed } from '@/types';
 
 import { queryString } from '@/utils/helpers';
 
@@ -11,6 +11,10 @@ export default class ChatsAPI extends BaseAPI {
 
   getChats(query: Indexed): Promise<XMLHttpRequestResponseType> {
     return this.http.get(queryString(query));
+  }
+
+  addChat(data: IChatCreate): Promise<XMLHttpRequestResponseType> {
+    return this.http.post('', { data });
   }
 
   create = undefined;
