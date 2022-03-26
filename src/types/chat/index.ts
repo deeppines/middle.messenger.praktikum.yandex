@@ -11,3 +11,7 @@ export interface IChatItem {
     content: string;
   };
 }
+
+export interface IChatCreate {
+  title: string;
+}
