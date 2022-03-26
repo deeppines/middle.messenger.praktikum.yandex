@@ -167,7 +167,7 @@ export const queryString = (data: Indexed) => {
     throw new Error('input must be an object');
   }
 
-  return getParams(data)
+  return `?${getParams(data)
     .map((arr) => arr.join('='))
-    .join('&');
+    .join('&')}`;
 };
