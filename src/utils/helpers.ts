@@ -126,3 +126,48 @@ export const closeModal = (id: string, event?: Event): void => {
   if (target === modal) removeClass('active', modal);
   if (target === null) removeClass('active', modal);
 };
+
+export const isPlainObject = (value: unknown): value is Indexed => {
+  return (
+    typeof value === 'object' &&
+    value !== null &&
+    value.constructor === Object &&
+    Object.prototype.toString.call(value) === '[object Object]'
+  );
+};
+
+export const isArray = (value: unknown): value is [] => {
+  return Array.isArray(value);
+};
+
+export const isArrayOrObject = (value: unknown): value is [] | Indexed => {
+  return isPlainObject(value) || isArray(value);
+};
+
+export const getKey = (key: string, parentKey?: string) => {
+  return parentKey ? `${parentKey}[${key}]` : key;
+};
+
+export const getParams = (data: Indexed | [], parentKey?: string) => {
+  const result: [string, string][] = [];
+
+  for (const [key, value] of Object.entries(data)) {
+    if (isArrayOrObject(value)) {
+      result.push(...getParams(value, getKey(key, parentKey)));
+    } else {
+      result.push([getKey(key, parentKey), encodeURIComponent(String(value))]);
+    }
+  }
+
+  return result;
+};
+
+export const queryString = (data: Indexed) => {
+  if (!isPlainObject(data)) {
+    throw new Error('input must be an object');
+  }
+
+  return getParams(data)
+    .map((arr) => arr.join('='))
+    .join('&');
+};
