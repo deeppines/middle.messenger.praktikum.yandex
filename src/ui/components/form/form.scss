@@ -12,6 +12,16 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    width: 100%;
+    max-width: 45%;
   }
 
   .link {

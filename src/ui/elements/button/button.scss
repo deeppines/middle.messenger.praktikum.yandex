@@ -20,6 +20,10 @@
     border-radius: 50%;
   }
 
+  &--gray {
+    background-color: $grey;
+  }
+
   &--back {
     display: inline-flex;
     align-items: center;
