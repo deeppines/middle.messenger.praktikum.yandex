@@ -17,6 +17,10 @@ export default class ChatsAPI extends BaseAPI {
     return this.http.post('', { data });
   }
 
+  deleteChat(id: string): Promise<XMLHttpRequestResponseType> {
+    return this.http.delete('', { data: { chatId: id } });
+  }
+
   create = undefined;
   read = undefined;
   update = undefined;

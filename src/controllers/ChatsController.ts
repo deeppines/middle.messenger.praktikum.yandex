@@ -26,6 +26,16 @@ class ChatsController {
 
     closeModal('addChat');
   }
+
+  async deleteChat(id: string) {
+    await this.api.deleteChat(id);
+
+    await this.getChats();
+
+    store.set('activeChat.id', null);
+
+    closeModal('delChat');
+  }
 }
 
 export default new ChatsController();
