@@ -1,10 +1,12 @@
 import Block from '@/utils/Block';
+import { formDataToObject } from '@/utils/formDataToObject';
 import { closeModal, openModal } from '@/utils/helpers';
 
 import Button from '@/ui/elements/button/button';
 import Icon from '@/ui/elements/icon/icon';
 
 import DelChatForm from '../form/DelChatForm/DelChatForm';
+import UserChatForm from '../form/UserChatForm/UserChatForm';
 import ModalBackdrop from '../ModalBackdrop/ModalBackdrop';
 
 import template from './chat-header.tpl.pug';
@@ -13,6 +15,7 @@ import iconAdd from '@/assets/icons/icon-add.svg';
 import iconCrossCircle from '@/assets/icons/icon-cross-circle.svg';
 import iconSettings from '@/assets/icons/icon-settings.svg';
 import iconTrash from '@/assets/icons/icon-trash.svg';
+import ChatsController from '@/controllers/ChatsController';
 import { withActiveChat } from '@/hoc';
 
 class ChatHeader extends Block {
@@ -41,6 +44,9 @@ class ChatHeader extends Block {
         width: 22,
         height: 22,
       }),
+      events: {
+        click: () => openModal('addUser'),
+      },
     });
 
     this.childrens.delUser = new Button({
@@ -53,6 +59,9 @@ class ChatHeader extends Block {
         width: 22,
         height: 22,
       }),
+      events: {
+        click: () => openModal('delUser'),
+      },
     });
 
     this.childrens.delChat = new Button({
@@ -68,6 +77,36 @@ class ChatHeader extends Block {
       events: {
         click: () => openModal('delChat'),
       },
+    });
+
+    this.childrens.addUserModal = new ModalBackdrop({
+      id: 'addUser',
+      title: 'Добавить пользователя',
+      events: {
+        click: (e) => closeModal('addUser', e),
+      },
+      modalContent: new UserChatForm({
+        buttonText: 'Добавить',
+        chatId: this.props.id,
+        events: {
+          submit: (e: Event) => this.addUserHandler(e),
+        },
+      }),
+    });
+
+    this.childrens.delUserModal = new ModalBackdrop({
+      id: 'delUser',
+      title: 'Удалить пользователя',
+      events: {
+        click: (e) => closeModal('delUser', e),
+      },
+      modalContent: new UserChatForm({
+        buttonText: 'Удалить',
+        chatId: this.props.id,
+        events: {
+          submit: (e: Event) => this.delUserHandler(e),
+        },
+      }),
     });
 
     this.childrens.delChatModal = new ModalBackdrop({
@@ -86,6 +125,28 @@ class ChatHeader extends Block {
     const settings = document.getElementById('settings');
 
     if (settings) settings.classList.toggle('active');
+  }
+
+  addUserHandler(e: Event) {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = formDataToObject(formData);
+    data.chatId = this.props.id;
+
+    ChatsController.addUser(data);
+  }
+
+  delUserHandler(e: Event) {
+    e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = formDataToObject(formData);
+    data.chatId = this.props.id;
+
+    ChatsController.deleteUser(data);
   }
 
   render() {

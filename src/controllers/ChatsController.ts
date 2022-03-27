@@ -27,6 +27,14 @@ class ChatsController {
     closeModal('addChat');
   }
 
+  async addUser(data: Record<string, unknown>) {
+    console.log(data, 'addUser');
+  }
+
+  async deleteUser(data: Record<string, unknown>) {
+    console.log(data, 'delUser');
+  }
+
   async deleteChat(id: string) {
     await this.api.deleteChat(id);
 

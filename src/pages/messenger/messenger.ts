@@ -68,6 +68,8 @@ class MessengerPage extends Block {
   }
 
   render() {
+    ChatsController.getChats();
+
     return this.compile(template, {});
   }
 }
