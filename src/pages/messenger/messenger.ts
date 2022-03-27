@@ -4,11 +4,12 @@ import Block from '@/utils/Block';
 import { formDataToObject } from '@/utils/formDataToObject';
 import { closeModal } from '@/utils/helpers';
 
-import AddChat from '@/ui/components/add-chat/add-chat';
 import ChatFooter from '@/ui/components/chat-footer/chat-footer';
 import ChatHeader from '@/ui/components/chat-header/chat-header';
 import ChatList from '@/ui/components/chat-list/chat-list';
+import AddChatForm from '@/ui/components/form/AddChatForm/AddChatForm';
 import Header from '@/ui/components/header/header';
+import ModalBackdrop from '@/ui/components/ModalBackdrop/ModalBackdrop';
 
 // import MessageView from '@/ui/components/message-view/message-view';
 import template from './messenger.tpl.pug';
@@ -24,11 +25,17 @@ class MessengerPage extends Block {
     this.childrens.chatHeader = new ChatHeader();
     this.childrens.chatFooter = new ChatFooter();
 
-    this.childrens.addChatModal = new AddChat({
+    this.childrens.addChatModal = new ModalBackdrop({
+      id: 'addChat',
+      title: 'Введите название',
       events: {
         click: (e) => closeModal('addChat', e),
-        submit: (e) => this.submitHandler(e),
       },
+      modalContent: new AddChatForm({
+        events: {
+          submit: (e) => this.submitHandler(e),
+        },
+      }),
     });
 
     // this.childrens.messageView = new MessageView({data: ''});

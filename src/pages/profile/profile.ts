@@ -2,7 +2,8 @@ import Block from '@/utils/Block';
 import { closeModal } from '@/utils/helpers';
 
 import Icon from '@/ui/elements/icon/icon';
-import ChangeAvatar from '@/ui/components/change-avatar/change-avatar';
+import ChangeAvatarForm from '@/ui/components/form/ChangeAvatarForm/ChangeAvatarForm';
+import ModalBackdrop from '@/ui/components/ModalBackdrop/ModalBackdrop';
 import Profile from '@/ui/components/profile/profile';
 
 import template from './profile.tpl.pug';
@@ -19,11 +20,17 @@ class ProfilePage extends Block {
       height: 24,
     });
 
-    this.childrens.changeAvatar = new ChangeAvatar({
+    this.childrens.changeAvatar = new ModalBackdrop({
+      id: 'changeAvatar',
+      title: 'Загрузите файл',
       events: {
         click: (e) => closeModal('changeAvatar', e),
-        submit: (e) => this.submitHandler(e),
       },
+      modalContent: new ChangeAvatarForm({
+        events: {
+          submit: (e) => this.submitHandler(e),
+        },
+      }),
     });
   }
 
