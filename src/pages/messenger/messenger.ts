@@ -63,6 +63,8 @@ class MessengerPage extends Block {
     const data = formDataToObject(formData);
 
     ChatsController.addChat(data as unknown as IChatCreate);
+
+    form.reset();
   }
 
   render() {

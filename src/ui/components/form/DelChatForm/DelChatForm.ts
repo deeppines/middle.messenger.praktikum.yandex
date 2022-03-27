@@ -7,9 +7,11 @@ import Button from '@/ui/elements/button/button';
 
 import template from './DelChatForm.tpl.pug';
 
+import ChatsController from '@/controllers/ChatsController';
+import { withActiveChat } from '@/hoc';
+
 interface IDelChatForm {
   modalId: string;
-  chatId: string;
   events?: TEvents;
 }
 
@@ -33,7 +35,14 @@ class DelChatForm extends Block {
       type: 'button',
       name: 'accept',
       text: 'Удалить',
+      events: {
+        click: () => this.delChatHandler(this.props.id),
+      },
     });
+  }
+
+  delChatHandler(chatId: string) {
+    ChatsController.deleteChat(chatId);
   }
 
   protected render(): DocumentFragment {
@@ -41,4 +50,4 @@ class DelChatForm extends Block {
   }
 }
 
-export default DelChatForm;
+export default withActiveChat(DelChatForm);
