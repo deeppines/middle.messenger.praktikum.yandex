@@ -9,12 +9,15 @@ export enum StoreEvents {
 
 export interface IState {
   currentUser?: IUser;
-  chats?: IChatItem[];
-  activeChat?: IChatItem;
+  chats: IChatItem[];
+  activeChat: IChatItem | null;
 }
 
 class Store extends EventBus {
-  private state: IState = {};
+  private state: IState = {
+    chats: [],
+    activeChat: null,
+  };
 
   public getState() {
     return this.state;

@@ -27,7 +27,7 @@ class ChatHeader extends Block {
         height: 16,
       }),
       events: {
-        click: (e) => this.clickSettingsHandler(e),
+        click: () => this.clickSettingsHandler(),
       },
     });
 
@@ -78,16 +78,13 @@ class ChatHeader extends Block {
       },
       modalContent: new DelChatForm({
         modalId: 'delChat',
-        chatId: '',
       }),
     });
   }
 
-  clickSettingsHandler(e: Event) {
-    const button = e.target as HTMLElement;
+  clickSettingsHandler() {
     const settings = document.getElementById('settings');
 
-    if (button) button.classList.toggle('active');
     if (settings) settings.classList.toggle('active');
   }
 
