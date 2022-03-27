@@ -1,7 +1,11 @@
 import Block from '@/utils/Block';
+import { closeModal, openModal } from '@/utils/helpers';
 
 import Button from '@/ui/elements/button/button';
 import Icon from '@/ui/elements/icon/icon';
+
+import DelChatForm from '../form/DelChatForm/DelChatForm';
+import ModalBackdrop from '../ModalBackdrop/ModalBackdrop';
 
 import template from './chat-header.tpl.pug';
 
@@ -60,6 +64,21 @@ class ChatHeader extends Block {
         id: iconTrash,
         width: 20,
         height: 20,
+      }),
+      events: {
+        click: () => openModal('delChat'),
+      },
+    });
+
+    this.childrens.delChatModal = new ModalBackdrop({
+      id: 'delChat',
+      title: 'Удалить чат?',
+      events: {
+        click: (e) => closeModal('delChat', e),
+      },
+      modalContent: new DelChatForm({
+        modalId: 'delChat',
+        chatId: '',
       }),
     });
   }
