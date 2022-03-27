@@ -10,6 +10,7 @@ export enum StoreEvents {
 export interface IState {
   currentUser?: IUser;
   chats?: IChatItem[];
+  activeChat?: IChatItem;
 }
 
 class Store extends EventBus {
