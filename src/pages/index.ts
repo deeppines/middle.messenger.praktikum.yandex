@@ -1,5 +1,6 @@
 import { PAGES } from '@/constants';
 import AuthController from '@/controllers/AuthController';
+import ChatsController from '@/controllers/ChatsController';
 import router from '@/router/Router';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   router.start();
 
   await AuthController.getUser();
+  await ChatsController.getChats();
 });

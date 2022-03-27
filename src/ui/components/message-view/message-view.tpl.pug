@@ -1,6 +1,10 @@
 include ../message-item/message-item
+include ../../mixins/section/section.pug
 
 .message-view
+  if !id
+    +section()
+      p Выберите чат чтобы отправить сообщение
   if data
     each item in data
       if item.type === 'date'

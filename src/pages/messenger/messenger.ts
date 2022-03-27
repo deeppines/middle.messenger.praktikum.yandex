@@ -9,21 +9,26 @@ import ChatHeader from '@/ui/components/chat-header/chat-header';
 import ChatList from '@/ui/components/chat-list/chat-list';
 import AddChatForm from '@/ui/components/form/AddChatForm/AddChatForm';
 import Header from '@/ui/components/header/header';
+import MessageView from '@/ui/components/message-view/message-view';
 import ModalBackdrop from '@/ui/components/ModalBackdrop/ModalBackdrop';
 
-// import MessageView from '@/ui/components/message-view/message-view';
 import template from './messenger.tpl.pug';
 
 import ChatsController from '@/controllers/ChatsController';
+import store from '@/store/Store';
 
 class MessengerPage extends Block {
   protected initChildren() {
     this.childrens.header = new Header();
 
-    this.childrens.chats = new ChatList({});
+    this.childrens.chats = new ChatList({
+      events: {
+        click: (e: Event) => this.clickOnChatHandler(e),
+      },
+    });
 
-    this.childrens.chatHeader = new ChatHeader();
-    this.childrens.chatFooter = new ChatFooter();
+    this.childrens.chatHeader = new ChatHeader({});
+    this.childrens.chatFooter = new ChatFooter({});
 
     this.childrens.addChatModal = new ModalBackdrop({
       id: 'addChat',
@@ -38,7 +43,16 @@ class MessengerPage extends Block {
       }),
     });
 
-    // this.childrens.messageView = new MessageView({data: ''});
+    this.childrens.messageView = new MessageView({});
+  }
+
+  clickOnChatHandler(e: Event) {
+    const button = e.target as HTMLButtonElement;
+    const chatId = button.id;
+    const state = store.getState();
+    const currentChat = state.chats?.filter((item) => item.id === Number(chatId))[0];
+
+    store.set('activeChat', currentChat);
   }
 
   submitHandler(e: Event) {
@@ -52,8 +66,6 @@ class MessengerPage extends Block {
   }
 
   render() {
-    ChatsController.getChats();
-
     return this.compile(template, {});
   }
 }
