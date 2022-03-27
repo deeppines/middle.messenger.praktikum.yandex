@@ -71,4 +71,34 @@
       background: transparentize($color: $black, $amount: 0.5);
     }
   }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px 0;
+    background-color: transparent;
+    transition: color 0.25s ease-in-out;
+
+    svg {
+      flex-shrink: 0;
+      margin-right: 15px;
+      fill: $blue;
+    }
+
+    &:hover {
+      color: $blue;
+      background-color: transparent;
+    }
+  }
+
+  &--icon-alert {
+    svg {
+      fill: $red;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
 }
