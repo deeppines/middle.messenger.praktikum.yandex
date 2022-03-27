@@ -1,4 +1,5 @@
 include ../../ui/mixins/section/section.pug
+include ../../ui/mixins/error-page/error-page.pug
 
 - var errorTitle = '500'
 - var errorDesc = 'Мы уже фиксим'
@@ -6,4 +7,4 @@ include ../../ui/mixins/section/section.pug
 
 main
   +section()
-    include ../../ui/mixins/error-page/error-page.pug
+    +errorPage(errorTitle, errorDesc, errorUrl)
