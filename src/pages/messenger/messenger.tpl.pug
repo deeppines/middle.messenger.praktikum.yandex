@@ -1,11 +1,12 @@
 extends ../../ui/layouts/chat/chat.pug
 
 block mixins
-  include ../../ui/components/section/section.pug
+  include ../../ui/mixins/section/section.pug
 
 block sidebar
   | !{header}
   | !{chats}
+  | !{addChatModal}
 
 block content
   +section()
