@@ -39,14 +39,44 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
+    background: transparent;
     transition: background 0.25s ease-in-out;
 
     svg {
       display: block;
+      pointer-events: none;
     }
 
-    &:hover {
-      background-color: $blue;
+    &.active {
+      background: $blue;
+
+      &:hover {
+        background: lighten($color: $blue, $amount: 10);
+      }
+    }
+  }
+
+  &__settings {
+    position: absolute;
+    top: 70px;
+    right: 12px;
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 15px;
+    background: $black;
+    box-shadow: 0 0 6px rgb(0 0 0 / 14%);
+    border-radius: 12px;
+    display: none;
+
+    &-sep {
+      display: block;
+      height: 1px;
+      margin: 5px 0;
+      background-color: $grey;
+    }
+
+    &.active {
+      display: block;
     }
   }
 }

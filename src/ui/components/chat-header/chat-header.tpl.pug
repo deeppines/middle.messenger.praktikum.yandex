@@ -4,5 +4,9 @@
   .chat-header__name
     .chat-header__name-img
     .chat-header__name-value= title
-  button(type="button" name="settings").chat-header__button
-    | !{icon}
+  | !{settings}
+  .chat-header__settings(id="settings")
+    | !{addUser}
+    | !{delUser}
+    span.chat-header__settings-sep
+    | !{delChat}
