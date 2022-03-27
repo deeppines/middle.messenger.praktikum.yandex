@@ -1,4 +1,4 @@
-import { IChatItem } from '@/types';
+import { TEvents } from '@/types';
 
 import Block from '@/utils/Block';
 import { openModal } from '@/utils/helpers';
@@ -10,7 +10,7 @@ import template from './chat-list.tpl.pug';
 import { withChats } from '@/hoc';
 
 interface IChatList {
-  items: IChatItem[];
+  events?: TEvents;
 }
 
 class ChatList extends Block {
@@ -30,7 +30,12 @@ class ChatList extends Block {
   }
 
   render() {
-    return this.compile(template, { items: this.props });
+    const { events, ...items } = this.props;
+
+    return this.compile(template, {
+      events,
+      items: items,
+    });
   }
 }
 

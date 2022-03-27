@@ -7,6 +7,7 @@ import MessageForm from '@/ui/components/message-form/message-form';
 import template from './chat-footer.tpl.pug';
 
 import iconClip from '@/assets/icons/icon-clip.svg';
+import { withActiveChat } from '@/hoc';
 
 class ChatFooter extends Block {
   protected initChildren() {
@@ -34,8 +35,8 @@ class ChatFooter extends Block {
   }
 
   render() {
-    return this.compile(template, {});
+    return this.compile(template, { ...this.props });
   }
 }
 
-export default ChatFooter;
+export default withActiveChat(ChatFooter);

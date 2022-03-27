@@ -1,6 +1,8 @@
-.chat-header
+.chat-header(
+  class= !id ? 'hidden' : ''
+)
   .chat-header__name
     .chat-header__name-img
-    .chat-header__name-value= 'Вадим'
+    .chat-header__name-value= title
   button(type="button" name="settings").chat-header__button
     | !{icon}

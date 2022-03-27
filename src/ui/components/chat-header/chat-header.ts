@@ -5,6 +5,7 @@ import Icon from '@/ui/elements/icon/icon';
 import template from './chat-header.tpl.pug';
 
 import iconSettings from '@/assets/icons/icon-settings.svg';
+import { withActiveChat } from '@/hoc';
 
 class ChatHeader extends Block {
   protected initChildren() {
@@ -16,8 +17,8 @@ class ChatHeader extends Block {
   }
 
   render() {
-    return this.compile(template, {});
+    return this.compile(template, { ...this.props });
   }
 }
 
-export default ChatHeader;
+export default withActiveChat(ChatHeader);

@@ -17,12 +17,17 @@
   }
 
   &__item {
+    text-align: left;
     display: flex;
     padding: 12px 10px;
     border-bottom: 1px solid $grey;
     color: $white;
     cursor: pointer;
     transition: background-color 0.25s ease-in-out;
+
+    & * {
+      pointer-events: none;
+    }
 
     &:hover {
       background-color: $grey;
