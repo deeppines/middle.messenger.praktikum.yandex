@@ -15,3 +15,8 @@ export interface IChatItem {
 export interface IChatCreate {
   title: string;
 }
+
+export interface IChatUsersRequest {
+  users: number[];
+  chatId: number;
+}

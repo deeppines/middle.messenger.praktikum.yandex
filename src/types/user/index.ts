@@ -8,3 +8,7 @@ export interface IUser {
   avatar?: string;
   display_name?: string;
 }
+
+export interface IUserSearchRequest {
+  login: string;
+}
