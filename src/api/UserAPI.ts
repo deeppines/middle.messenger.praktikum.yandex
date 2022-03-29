@@ -1,4 +1,4 @@
-import { IPasswordData, IUser } from '@/types';
+import { IPasswordData, IUser, IUserSearchRequest } from '@/types';
 
 import BaseAPI from './BaseAPI';
 
@@ -17,6 +17,14 @@ export default class UserAPI extends BaseAPI {
 
   updatePassword(data: IPasswordData): Promise<XMLHttpRequestResponseType> {
     return this.http.put('/password', { data });
+  }
+
+  get(id: string): Promise<XMLHttpRequestResponseType> {
+    return this.http.get(`/${id}`);
+  }
+
+  search(data: IUserSearchRequest): Promise<XMLHttpRequestResponseType> {
+    return this.http.post('/search', { data });
   }
 
   create = undefined;

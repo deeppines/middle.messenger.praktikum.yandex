@@ -1,4 +1,4 @@
-import { IChatCreate, Indexed } from '@/types';
+import { IChatCreate, IChatUsersRequest, Indexed } from '@/types';
 
 import { queryString } from '@/utils/helpers';
 
@@ -19,6 +19,14 @@ export default class ChatsAPI extends BaseAPI {
 
   deleteChat(id: string): Promise<XMLHttpRequestResponseType> {
     return this.http.delete('', { data: { chatId: id } });
+  }
+
+  addUser(data: IChatUsersRequest): Promise<XMLHttpRequestResponseType> {
+    return this.http.put('/users', { data });
+  }
+
+  deleteUser(data: IChatUsersRequest): Promise<XMLHttpRequestResponseType> {
+    return this.http.delete('/users', { data });
   }
 
   create = undefined;
