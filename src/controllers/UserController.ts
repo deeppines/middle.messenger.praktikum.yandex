@@ -1,4 +1,4 @@
-import { IPasswordFormData, IUser } from '@/types';
+import { IPasswordFormData, IUser, IUserSearchRequest } from '@/types';
 
 import UserAPI from '@/api/UserAPI';
 
@@ -41,6 +41,10 @@ class UserController {
     store.set('currentUser.avatar', response.avatar);
 
     closeModal('changeAvatar');
+  }
+
+  async searchUser(data: IUserSearchRequest) {
+    return await this.api.search(data);
   }
 }
 

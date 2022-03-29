@@ -25,7 +25,7 @@ class UserChatForm extends Block {
     this.childrens.login = new FormField({
       inputProps: {
         type: 'text',
-        name: 'title',
+        name: 'login',
         required: true,
         minlength: 3,
         maxlength: 20,
@@ -33,7 +33,7 @@ class UserChatForm extends Block {
         placeholder: '',
       },
       label: 'Логин',
-      name: 'title',
+      name: 'login',
       validate: true,
     });
 

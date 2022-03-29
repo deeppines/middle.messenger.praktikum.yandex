@@ -1,8 +1,10 @@
-import { IChatCreate } from '@/types';
+import { IChatCreate, IChatUsersRequest, IUser } from '@/types';
 
 import ChatsAPI from '@/api/ChatsAPI';
 
 import { closeModal } from '@/utils/helpers';
+
+import UserController from './UserController';
 
 import store from '@/store/Store';
 
@@ -28,11 +30,37 @@ class ChatsController {
   }
 
   async addUser(data: Record<string, unknown>) {
-    console.log(data, 'addUser');
+    const { login, chatId } = data;
+
+    const user = (await UserController.searchUser({
+      login: login as string,
+    })) as unknown as IUser[];
+
+    const requestData: IChatUsersRequest = {
+      users: [user[0].id as number],
+      chatId: chatId as number,
+    };
+
+    await this.api.addUser(requestData);
+
+    closeModal('addUser');
   }
 
   async deleteUser(data: Record<string, unknown>) {
-    console.log(data, 'delUser');
+    const { login, chatId } = data;
+
+    const user = (await UserController.searchUser({
+      login: login as string,
+    })) as unknown as IUser[];
+
+    const requestData: IChatUsersRequest = {
+      users: [user[0].id as number],
+      chatId: chatId as number,
+    };
+
+    await this.api.deleteUser(requestData);
+
+    closeModal('delUser');
   }
 
   async deleteChat(id: string) {
