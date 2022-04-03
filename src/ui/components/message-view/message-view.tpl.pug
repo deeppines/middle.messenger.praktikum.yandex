@@ -2,14 +2,14 @@ include ../message-item/message-item
 include ../../mixins/section/section.pug
 
 .message-view
-  if !id
+  if !chat
     +section()
       p Выберите чат чтобы отправить сообщение
   if data
     each item in data
       if item.type === 'date'
         .message-view__date= item.value
-      else if item.type === 'inbox'
+      else if item.type === 'message'
         .message-view__inbox
           +message(item)
       else

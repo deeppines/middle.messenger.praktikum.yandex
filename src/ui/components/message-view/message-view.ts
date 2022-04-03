@@ -16,9 +16,7 @@ class MessageView extends Block {
   }
 
   render() {
-    // console.log(this.props, 'props');
-
-    return this.compile(template, { ...this.props });
+    return this.compile(template, { data: this.props.messages, ...this.props });
   }
 }
 
