@@ -1,9 +1,10 @@
-import { IChatCreate, IChatUsersRequest, IUser } from '@/types';
+import { IChatCreate, IChatItem, IChatUsersRequest, IUser } from '@/types';
 
 import ChatsAPI from '@/api/ChatsAPI';
 import SocketConnection from '@/api/SocketConnection';
 
 import { closeModal } from '@/utils/helpers';
+import { transformDateInChats } from '@/utils/transformDateInChats';
 
 import UserController from './UserController';
 
@@ -20,6 +21,8 @@ class ChatsController {
 
   async getChats() {
     const chats = await this.api.getChats({ offset: 0, limit: 50 });
+
+    transformDateInChats(chats as unknown as IChatItem[]);
 
     store.set('chats', chats);
   }
