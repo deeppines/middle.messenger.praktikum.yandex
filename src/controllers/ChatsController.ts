@@ -1,6 +1,7 @@
 import { IChatCreate, IChatUsersRequest, IUser } from '@/types';
 
 import ChatsAPI from '@/api/ChatsAPI';
+import SocketConnection from '@/api/SocketConnection';
 
 import { closeModal } from '@/utils/helpers';
 
@@ -71,6 +72,14 @@ class ChatsController {
     store.set('activeChat.id', null);
 
     closeModal('delChat');
+  }
+
+  async setSocketConnection(userId: string, chatId: string) {
+    const { token } = (await this.api.getToken(chatId)) as unknown as Record<string, unknown>;
+
+    const endpoint = `${userId}/${chatId}/${token}`;
+
+    new SocketConnection(endpoint);
   }
 }
 

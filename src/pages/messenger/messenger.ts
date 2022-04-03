@@ -51,8 +51,12 @@ class MessengerPage extends Block {
     const chatId = button.id;
     const state = store.getState();
     const currentChat = state.chats?.filter((item) => item.id === Number(chatId))[0];
+    const userId = String(state.currentUser?.id);
 
-    store.set('activeChat', currentChat);
+    if (chatId && userId) {
+      store.set('activeChat', currentChat);
+      ChatsController.setSocketConnection(userId, chatId);
+    }
   }
 
   submitHandler(e: Event) {
