@@ -5,6 +5,7 @@ import Block from '@/utils/Block';
 import template from './message-view.tpl.pug';
 
 import { withActiveChat } from '@/hoc';
+import { withUser } from '@/hoc/withUser';
 
 interface IMessageView {
   data: IMessageItem[];
@@ -20,4 +21,4 @@ class MessageView extends Block {
   }
 }
 
-export default withActiveChat(MessageView);
+export default withActiveChat(withUser(MessageView));

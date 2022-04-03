@@ -1,6 +1,6 @@
-mixin message(item)
+mixin message(item, type)
   .message-item(
-    class= item.type === 'inbox' ? 'message-item--inbox' : 'message-item--outbox'
+    class= type === 'inbox' ? 'message-item--inbox' : 'message-item--outbox'
   )= item.content
     span(class='message-item__info')
       if item.is_read === 'true'

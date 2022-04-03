@@ -54,7 +54,7 @@ class MessengerPage extends Block {
     const userId = String(state.currentUser?.id);
 
     if (chatId && userId) {
-      store.set('activeChat', currentChat);
+      store.set('activeChat.chat', currentChat);
       ChatsController.setSocketConnection(userId, chatId);
     }
   }
