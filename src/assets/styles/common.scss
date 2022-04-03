@@ -21,6 +21,7 @@
 @import '../../ui/mixins/section/section';
 @import '../../ui/mixins/modal/modal';
 @import '../../ui/mixins/chat-view/chat-view';
+@import '../../ui/mixins/message-item/message-item';
 
 // components ui
 @import '../../ui/components/form/form';
@@ -34,5 +35,4 @@
 @import '../../ui/components/chat-footer/chat-footer';
 @import '../../ui/components/message-form/message-form';
 @import '../../ui/components/message-view/message-view';
-@import '../../ui/components/message-item/message-item';
 @import '../../ui/components/ModalBackdrop/ModalBackdrop';
