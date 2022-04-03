@@ -7,6 +7,7 @@ import MessageForm from '@/ui/components/message-form/message-form';
 import template from './chat-footer.tpl.pug';
 
 import iconClip from '@/assets/icons/icon-clip.svg';
+import ChatsController from '@/controllers/ChatsController';
 import { withActiveChat } from '@/hoc';
 
 class ChatFooter extends Block {
@@ -29,13 +30,15 @@ class ChatFooter extends Block {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    const data = formDataToObject(formData);
 
-    // eslint-disable-next-line no-restricted-syntax
-    console.log(formDataToObject(formData));
+    ChatsController.sendMessage(String(data.message));
+
+    form.reset();
   }
 
   render() {
-    return this.compile(template, { ...this.props });
+    return this.compile(template, { ...this.props.chat });
   }
 }
 

@@ -1,4 +1,4 @@
-import { IChatItem, IUser } from '@/types';
+import { IChatItem, IMessageItem, IUser } from '@/types';
 
 import EventBus from '../utils/EventBus';
 import { set } from '../utils/helpers';
@@ -10,13 +10,19 @@ export enum StoreEvents {
 export interface IState {
   currentUser?: IUser;
   chats: IChatItem[];
-  activeChat: IChatItem | null;
+  activeChat: {
+    chat: IChatItem | null;
+    messages: IMessageItem[] | [];
+  };
 }
 
 class Store extends EventBus {
   private state: IState = {
     chats: [],
-    activeChat: null,
+    activeChat: {
+      chat: null,
+      messages: [],
+    },
   };
 
   public getState() {
