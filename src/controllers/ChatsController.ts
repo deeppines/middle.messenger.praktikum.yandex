@@ -11,9 +11,11 @@ import store from '@/store/Store';
 
 class ChatsController {
   private api: ChatsAPI;
+  private socket: SocketConnection | null;
 
   constructor() {
     this.api = new ChatsAPI();
+    this.socket = null;
   }
 
   async getChats() {
@@ -69,7 +71,7 @@ class ChatsController {
 
     await this.getChats();
 
-    store.set('activeChat.id', null);
+    store.set('activeChat.chat.id', null);
 
     closeModal('delChat');
   }
@@ -79,7 +81,13 @@ class ChatsController {
 
     const endpoint = `${userId}/${chatId}/${token}`;
 
-    new SocketConnection(endpoint);
+    this.socket = new SocketConnection(endpoint);
+  }
+
+  async sendMessage(message: string) {
+    if (this.socket) {
+      this.socket.sendMessage(message);
+    }
   }
 }
 
