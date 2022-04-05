@@ -7,6 +7,7 @@ import template from './input.tpl.pug';
 export interface IInput {
   type: string;
   name: string;
+  id?: string;
   value?: string;
   classes?: string;
   placeholder?: string;
