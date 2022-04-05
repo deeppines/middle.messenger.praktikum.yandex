@@ -133,7 +133,7 @@ class ChatHeader extends Block {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const data = formDataToObject(formData);
-    data.chatId = this.props.id;
+    data.chatId = this.props.chat.id;
 
     ChatsController.addUser(data);
   }

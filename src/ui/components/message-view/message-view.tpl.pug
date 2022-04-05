@@ -10,9 +10,9 @@ include ../../mixins/section/section.pug
       each item in data
         if item.type === 'date'
           .message-view__date= item.value
-        else if item.user_id !== id
-          .message-view__inbox
-            +message(item, 'inbox')
-        else
+        else if item.user_id === id || item.userId === id
           .message-view__outbox
             +message(item, 'outbox')
+        else
+          .message-view__inbox
+            +message(item, 'inbox')
