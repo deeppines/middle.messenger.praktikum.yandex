@@ -1,17 +1,18 @@
 include ../../mixins/message-item/message-item
 include ../../mixins/section/section.pug
 
-.message-view
-  if !chat
-    +section()
-      p Выберите чат чтобы отправить сообщение
-  if data
-    each item in data
-      if item.type === 'date'
-        .message-view__date= item.value
-      else if item.user_id !== id
-        .message-view__inbox
-          +message(item, 'inbox')
-      else
-        .message-view__outbox
-          +message(item, 'outbox')
+.message-view(id='messageView')
+  .wrap
+    if !chat
+      +section()
+        p Выберите чат чтобы отправить сообщение
+    if data
+      each item in data
+        if item.type === 'date'
+          .message-view__date= item.value
+        else if item.user_id !== id
+          .message-view__inbox
+            +message(item, 'inbox')
+        else
+          .message-view__outbox
+            +message(item, 'outbox')
