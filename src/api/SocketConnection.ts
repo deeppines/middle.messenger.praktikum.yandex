@@ -7,9 +7,11 @@ import store from '@/store/Store';
 
 export default class SocketConnection {
   protected socket;
+  protected timerId?: number;
 
   constructor(endpoint: string) {
     this.socket = new WebSocket(`${BASE_SOCKET_URL}${endpoint}`);
+    this.timerId;
 
     this.init();
   }
@@ -22,33 +24,35 @@ export default class SocketConnection {
     this.socket.addEventListener('open', () => {
       console.log('Соединение установлено');
 
+      clearInterval(this.timerId);
+      this.setPing();
       this.getPrevMessages('0');
     });
 
     this.socket.addEventListener('close', (event) => {
       if (event.wasClean) {
         console.log('Соединение закрыто чисто');
+        store.set('activeChat.messages', []);
       } else {
         console.log('Обрыв соединения');
       }
 
       console.log(`Код: ${event.code} | Причина: ${event.reason}`);
-      store.set('activeChat.messages', []);
     });
 
     this.socket.addEventListener('message', (event) => {
       // console.log('Получены данные', event.data);
       const data = JSON.parse(event.data);
 
-      if (data) {
+      if (data && data.type !== 'error') {
         sortMessages(data);
         transformDateInMsg(data);
-      }
 
-      if (Array.isArray(data)) {
-        store.set('activeChat.messages', data);
-      } else {
-        store.set('activeChat.messages', [...store.getState().activeChat.messages, data]);
+        if (Array.isArray(data)) {
+          store.set('activeChat.messages', data);
+        } else {
+          store.set('activeChat.messages', [...store.getState().activeChat.messages, data]);
+        }
       }
     });
 
@@ -73,5 +77,11 @@ export default class SocketConnection {
         type: 'get old',
       })
     );
+  }
+
+  private setPing() {
+    this.timerId = setInterval(() => {
+      this.socket.send(JSON.stringify({ type: 'ping' }));
+    }, 2000);
   }
 }

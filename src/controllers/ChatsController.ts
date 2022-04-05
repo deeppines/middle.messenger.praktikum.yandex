@@ -19,6 +19,14 @@ class ChatsController {
     this.socket = null;
   }
 
+  async setSocketConnection(userId: string, chatId: string) {
+    const { token } = (await this.api.getToken(chatId)) as unknown as Record<string, unknown>;
+
+    const endpoint = `${userId}/${chatId}/${token}`;
+
+    this.socket = new SocketConnection(endpoint);
+  }
+
   async getChats() {
     const chats = await this.api.getChats({ offset: 0, limit: 50 });
 
@@ -77,14 +85,6 @@ class ChatsController {
     store.set('activeChat.chat.id', null);
 
     closeModal('delChat');
-  }
-
-  async setSocketConnection(userId: string, chatId: string) {
-    const { token } = (await this.api.getToken(chatId)) as unknown as Record<string, unknown>;
-
-    const endpoint = `${userId}/${chatId}/${token}`;
-
-    this.socket = new SocketConnection(endpoint);
   }
 
   async sendMessage(message: string) {
