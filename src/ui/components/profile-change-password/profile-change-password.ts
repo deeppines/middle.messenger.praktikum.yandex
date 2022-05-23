@@ -1,16 +1,17 @@
-import { TEvents } from '@/types/common';
+import { TEvents } from 'src/types/common';
 
-import Block from '@/utils/Block';
-import { getAvatarPlug } from '@/utils/getAvatarPlug';
+import { PASSWORD } from 'src/constants';
 
-import Button from '@/ui/elements/button/button';
-import Link from '@/ui/elements/link/link';
-import FormField from '@/ui/components/form-field/form-field';
+import Block from 'src/utils/Block';
+import { getAvatarPlug } from 'src/utils/getAvatarPlug';
+
+import Button from 'src/ui/elements/button/button';
+import Link from 'src/ui/elements/link/link';
+import FormField from 'src/ui/components/form-field/form-field';
 
 import template from './profile-change-password.tpl.pug';
 
-import { PASSWORD } from '@/constants';
-import { withUser } from '@/hoc/withUser';
+import { withUser } from 'src/hoc/withUser';
 
 interface IProfileChangePassword {
   events?: TEvents;

@@ -1,4 +1,4 @@
-import { ISignInData, ISignUpData } from '@/types';
+import { ISignInData, ISignUpData } from 'src/types';
 
 import BaseAPI from './BaseAPI';
 

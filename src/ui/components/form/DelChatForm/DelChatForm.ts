@@ -1,14 +1,15 @@
-import { TEvents } from '@/types';
+import { TEvents } from 'src/types';
 
-import Block from '@/utils/Block';
-import { closeModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { closeModal } from 'src/utils/helpers';
 
-import Button from '@/ui/elements/button/button';
+import ChatsController from 'src/controllers/ChatsController';
+
+import Button from 'src/ui/elements/button/button';
 
 import template from './DelChatForm.tpl.pug';
 
-import ChatsController from '@/controllers/ChatsController';
-import { withActiveChat } from '@/hoc';
+import { withActiveChat } from 'src/hoc';
 
 interface IDelChatForm {
   modalId: string;

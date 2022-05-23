@@ -1,13 +1,13 @@
-import { ISignUpFormData } from '@/types';
+import { ISignUpFormData } from 'src/types';
 
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
 
-import SignupForm from '@/ui/components/form/signup-form/signup-form';
+import AuthController from 'src/controllers/AuthController';
+
+import SignupForm from 'src/ui/components/form/signup-form/signup-form';
 
 import template from './signup.tpl.pug';
-
-import AuthController from '@/controllers/AuthController';
 
 class SignupPage extends Block {
   protected initChildren() {

@@ -1,15 +1,16 @@
-import Block from '@/utils/Block';
-import { getAvatarPlug } from '@/utils/getAvatarPlug';
-import { getProfileItems } from '@/utils/getProfileItems';
-import { openModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { getAvatarPlug } from 'src/utils/getAvatarPlug';
+import { getProfileItems } from 'src/utils/getProfileItems';
+import { openModal } from 'src/utils/helpers';
 
-import Button from '@/ui/elements/button/button';
-import Link from '@/ui/elements/link/link';
+import AuthController from 'src/controllers/AuthController';
+
+import Button from 'src/ui/elements/button/button';
+import Link from 'src/ui/elements/link/link';
 
 import template from './profile.tpl.pug';
 
-import AuthController from '@/controllers/AuthController';
-import { withUser } from '@/hoc/withUser';
+import { withUser } from 'src/hoc/withUser';
 
 class Profile extends Block {
   protected initChildren() {

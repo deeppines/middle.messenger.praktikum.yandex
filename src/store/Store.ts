@@ -1,4 +1,4 @@
-import { IChatItem, IMessageItem, IUser } from '@/types';
+import { IChatItem, IMessageItem, IUser } from 'src/types';
 
 import EventBus from '../utils/EventBus';
 import { set } from '../utils/helpers';

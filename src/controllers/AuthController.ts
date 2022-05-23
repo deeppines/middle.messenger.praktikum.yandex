@@ -1,12 +1,14 @@
-import { ISignInData, ISignUpFormData } from '@/types';
+import { ISignInData, ISignUpFormData } from 'src/types';
 
-import AuthAPI from '@/api/AuthAPI';
+import { PagePaths } from 'src/constants';
 
-import { getPathname } from '@/utils/getPathname';
+import { getPathname } from 'src/utils/getPathname';
 
-import { PagePaths } from '@/constants';
-import router from '@/router/Router';
-import store from '@/store/Store';
+import AuthAPI from 'src/api/AuthAPI';
+
+import router from 'src/router/Router';
+
+import store from 'src/store/Store';
 
 class AuthController {
   private api: AuthAPI;

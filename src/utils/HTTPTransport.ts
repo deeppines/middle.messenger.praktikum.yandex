@@ -1,6 +1,6 @@
-import { Options, OptionsWithoutMethod } from '@/types';
+import { Options, OptionsWithoutMethod } from 'src/types';
 
-import { BASE_URL, Method } from '@/constants';
+import { BASE_URL, Method } from 'src/constants';
 
 class HTTPTransport {
   static API_URL = BASE_URL;

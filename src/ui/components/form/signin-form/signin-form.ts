@@ -1,14 +1,14 @@
-import { TEvents } from '@/types/common';
+import { TEvents } from 'src/types/common';
 
-import Block from '@/utils/Block';
+import { LOGIN, PASSWORD } from 'src/constants';
 
-import Button from '@/ui/elements/button/button';
-import Link from '@/ui/elements/link/link';
-import FormField from '@/ui/components/form-field/form-field';
+import Block from 'src/utils/Block';
+
+import Button from 'src/ui/elements/button/button';
+import Link from 'src/ui/elements/link/link';
+import FormField from 'src/ui/components/form-field/form-field';
 
 import template from './signin-form.tpl.pug';
-
-import { LOGIN, PASSWORD } from '@/constants';
 
 interface ISigninForm {
   events?: TEvents;

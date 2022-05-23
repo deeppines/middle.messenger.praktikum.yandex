@@ -1,7 +1,7 @@
-import Block from '@/utils/Block';
-import { isEqual } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { isEqual } from 'src/utils/helpers';
 
-import store, { IState, StoreEvents } from '@/store/Store';
+import store, { IState, StoreEvents } from 'src/store/Store';
 
 const withStore =
   (mapStateToProps: (state: IState) => Record<string, unknown>) => (Component: typeof Block) => {

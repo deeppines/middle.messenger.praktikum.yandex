@@ -1,6 +1,6 @@
-import Block from '@/utils/Block';
+import { PagePaths } from 'src/constants';
 
-import { PagePaths } from '@/constants';
+import Block from 'src/utils/Block';
 
 export type TEvents = Record<string, (e: Event) => void>;
 

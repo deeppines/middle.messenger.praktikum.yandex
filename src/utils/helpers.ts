@@ -1,4 +1,4 @@
-import { Indexed } from '@/types';
+import { Indexed } from 'src/types';
 
 export const addClass = (cl: string, el: HTMLElement | null): void => {
   if (el) el.classList.add(cl);

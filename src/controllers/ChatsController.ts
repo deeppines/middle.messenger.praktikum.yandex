@@ -1,14 +1,14 @@
-import { IChatCreate, IChatItem, IChatUsersRequest, IUser } from '@/types';
+import { IChatCreate, IChatItem, IChatUsersRequest, IUser } from 'src/types';
 
-import ChatsAPI from '@/api/ChatsAPI';
-import SocketConnection from '@/api/SocketConnection';
+import { closeModal } from 'src/utils/helpers';
+import { transformDateInChats } from 'src/utils/transformDateInChats';
 
-import { closeModal } from '@/utils/helpers';
-import { transformDateInChats } from '@/utils/transformDateInChats';
+import ChatsAPI from 'src/api/ChatsAPI';
+import SocketConnection from 'src/api/SocketConnection';
 
 import UserController from './UserController';
 
-import store from '@/store/Store';
+import store from 'src/store/Store';
 
 class ChatsController {
   private api: ChatsAPI;

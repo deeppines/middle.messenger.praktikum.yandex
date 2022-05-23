@@ -1,4 +1,4 @@
-import { IPasswordData, IUser, IUserSearchRequest } from '@/types';
+import { IPasswordData, IUser, IUserSearchRequest } from 'src/types';
 
 import BaseAPI from './BaseAPI';
 

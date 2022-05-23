@@ -1,9 +1,11 @@
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
-import { closeModal, openModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
+import { closeModal, openModal } from 'src/utils/helpers';
 
-import Button from '@/ui/elements/button/button';
-import Icon from '@/ui/elements/icon/icon';
+import ChatsController from 'src/controllers/ChatsController';
+
+import Button from 'src/ui/elements/button/button';
+import Icon from 'src/ui/elements/icon/icon';
 
 import DelChatForm from '../form/DelChatForm/DelChatForm';
 import UserChatForm from '../form/UserChatForm/UserChatForm';
@@ -11,12 +13,11 @@ import ModalBackdrop from '../ModalBackdrop/ModalBackdrop';
 
 import template from './chat-header.tpl.pug';
 
-import iconAdd from '@/assets/icons/icon-add.svg';
-import iconCrossCircle from '@/assets/icons/icon-cross-circle.svg';
-import iconSettings from '@/assets/icons/icon-settings.svg';
-import iconTrash from '@/assets/icons/icon-trash.svg';
-import ChatsController from '@/controllers/ChatsController';
-import { withActiveChat } from '@/hoc';
+import iconAdd from 'src/assets/icons/icon-add.svg';
+import iconCrossCircle from 'src/assets/icons/icon-cross-circle.svg';
+import iconSettings from 'src/assets/icons/icon-settings.svg';
+import iconTrash from 'src/assets/icons/icon-trash.svg';
+import { withActiveChat } from 'src/hoc';
 
 class ChatHeader extends Block {
   protected initChildren() {

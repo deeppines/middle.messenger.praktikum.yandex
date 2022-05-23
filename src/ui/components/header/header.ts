@@ -1,13 +1,13 @@
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
 
-import Icon from '@/ui/elements/icon/icon';
-import Link from '@/ui/elements/link/link';
-import Search from '@/ui/components/search/search';
+import Icon from 'src/ui/elements/icon/icon';
+import Link from 'src/ui/elements/link/link';
+import Search from 'src/ui/components/search/search';
 
 import template from './header.tpl.pug';
 
-import arrowRight from '@/assets/icons/arrow-right.svg';
+import arrowRight from 'src/assets/icons/arrow-right.svg';
 
 class Header extends Block {
   protected initChildren() {

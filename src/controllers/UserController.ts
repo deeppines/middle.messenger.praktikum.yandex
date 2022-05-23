@@ -1,12 +1,14 @@
-import { IPasswordFormData, IUser, IUserSearchRequest } from '@/types';
+import { IPasswordFormData, IUser, IUserSearchRequest } from 'src/types';
 
-import UserAPI from '@/api/UserAPI';
+import { PagePaths } from 'src/constants';
 
-import { closeModal } from '@/utils/helpers';
+import { closeModal } from 'src/utils/helpers';
 
-import { PagePaths } from '@/constants';
-import router from '@/router/Router';
-import store from '@/store/Store';
+import UserAPI from 'src/api/UserAPI';
+
+import router from 'src/router/Router';
+
+import store from 'src/store/Store';
 
 class UserController {
   private api: UserAPI;

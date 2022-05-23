@@ -1,4 +1,4 @@
-import { IChatItem } from '@/types';
+import { IChatItem } from 'src/types';
 
 import { setFormat } from './setFormatDate';
 

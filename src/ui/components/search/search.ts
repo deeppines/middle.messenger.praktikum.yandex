@@ -1,12 +1,12 @@
-import { TEvents } from '@/types/common';
+import { TEvents } from 'src/types/common';
 
-import Block from '@/utils/Block';
+import Block from 'src/utils/Block';
 
-import Icon from '@/ui/elements/icon/icon';
+import Icon from 'src/ui/elements/icon/icon';
 
 import template from './search.tpl.pug';
 
-import iconSearch from '@/assets/icons/icon-search.svg';
+import iconSearch from 'src/assets/icons/icon-search.svg';
 
 interface ISearch {
   events?: TEvents;

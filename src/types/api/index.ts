@@ -1,4 +1,4 @@
-import { Method } from '@/constants';
+import { Method } from 'src/constants';
 
 export type Options = {
   method: Method;

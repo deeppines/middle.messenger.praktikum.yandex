@@ -1,10 +1,10 @@
-import { TEvents } from '@/types/common';
+import { TEvents } from 'src/types/common';
 
-import Block from '@/utils/Block';
-import { addClass, inputHasValue, removeClass, setMessage } from '@/utils/helpers';
-import { getValidationMsg, isValid } from '@/utils/validation';
+import Block from 'src/utils/Block';
+import { addClass, inputHasValue, removeClass, setMessage } from 'src/utils/helpers';
+import { getValidationMsg, isValid } from 'src/utils/validation';
 
-import Input, { IInput } from '@/ui/elements/input/input';
+import Input, { IInput } from 'src/ui/elements/input/input';
 
 import template from './form-field.tpl.pug';
 

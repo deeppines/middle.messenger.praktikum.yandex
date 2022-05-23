@@ -1,4 +1,4 @@
-import Block from '@/utils/Block';
+import Block from 'src/utils/Block';
 
 import template from './500.tpl.pug';
 

@@ -1,15 +1,16 @@
-import Block from '@/utils/Block';
-import { closeModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { closeModal } from 'src/utils/helpers';
 
-import Icon from '@/ui/elements/icon/icon';
-import ChangeAvatarForm from '@/ui/components/form/ChangeAvatarForm/ChangeAvatarForm';
-import ModalBackdrop from '@/ui/components/ModalBackdrop/ModalBackdrop';
-import Profile from '@/ui/components/profile/profile';
+import UserController from 'src/controllers/UserController';
+
+import Icon from 'src/ui/elements/icon/icon';
+import ChangeAvatarForm from 'src/ui/components/form/ChangeAvatarForm/ChangeAvatarForm';
+import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
+import Profile from 'src/ui/components/profile/profile';
 
 import template from './profile.tpl.pug';
 
-import arrowLeft from '@/assets/icons/arrow-left.svg';
-import UserController from '@/controllers/UserController';
+import arrowLeft from 'src/assets/icons/arrow-left.svg';
 class ProfilePage extends Block {
   protected initChildren() {
     this.childrens.profile = new Profile({});

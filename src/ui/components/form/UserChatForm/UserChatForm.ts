@@ -1,14 +1,15 @@
-import { TEvents } from '@/types';
+import { TEvents } from 'src/types';
 
-import Block from '@/utils/Block';
+import { LOGIN } from 'src/constants';
 
-import Button from '@/ui/elements/button/button';
-import FormField from '@/ui/components/form-field/form-field';
+import Block from 'src/utils/Block';
+
+import Button from 'src/ui/elements/button/button';
+import FormField from 'src/ui/components/form-field/form-field';
 
 import template from './UserChatForm.tpl.pug';
 
-import { LOGIN } from '@/constants';
-import { withActiveChat } from '@/hoc';
+import { withActiveChat } from 'src/hoc';
 
 interface IUserChatForm {
   buttonText: string;

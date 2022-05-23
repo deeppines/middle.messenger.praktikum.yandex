@@ -1,9 +1,9 @@
-import { TEvents } from '@/types';
+import { TEvents } from 'src/types';
 
-import Block from '@/utils/Block';
-import { addClass, removeClass } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { addClass, removeClass } from 'src/utils/helpers';
 
-import Button from '@/ui/elements/button/button';
+import Button from 'src/ui/elements/button/button';
 
 import FormField from '../../form-field/form-field';
 

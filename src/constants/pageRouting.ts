@@ -1,14 +1,14 @@
-import { IPage } from '@/types';
+import { IPage } from 'src/types';
 
 import { PagePaths } from './pagePaths';
 
-import ClientErrorPage from '@/pages/404/404';
-import MessengerPage from '@/pages/messenger/messenger';
-import PasswordPage from '@/pages/password/password';
-import ProfilePage from '@/pages/profile/profile';
-import SettingsPage from '@/pages/settings/settings';
-import SigninPage from '@/pages/signin/signin';
-import SignupPage from '@/pages/signup/signup';
+import ClientErrorPage from 'src/pages/404/404';
+import MessengerPage from 'src/pages/messenger/messenger';
+import PasswordPage from 'src/pages/password/password';
+import ProfilePage from 'src/pages/profile/profile';
+import SettingsPage from 'src/pages/settings/settings';
+import SigninPage from 'src/pages/signin/signin';
+import SignupPage from 'src/pages/signup/signup';
 
 export const PAGES: IPage[] = [
   {

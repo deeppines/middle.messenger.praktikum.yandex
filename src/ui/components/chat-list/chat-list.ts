@@ -1,13 +1,13 @@
-import { IChatItem, TEvents } from '@/types';
+import { IChatItem, TEvents } from 'src/types';
 
-import Block from '@/utils/Block';
-import { openModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { openModal } from 'src/utils/helpers';
 
-import Button from '@/ui/elements/button/button';
+import Button from 'src/ui/elements/button/button';
 
 import template from './chat-list.tpl.pug';
 
-import { withChats } from '@/hoc';
+import { withChats } from 'src/hoc';
 
 interface IChatList {
   chats?: IChatItem[];

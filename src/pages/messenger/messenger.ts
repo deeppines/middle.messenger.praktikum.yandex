@@ -1,21 +1,22 @@
-import { IChatCreate } from '@/types';
+import { IChatCreate } from 'src/types';
 
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
-import { closeModal } from '@/utils/helpers';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
+import { closeModal } from 'src/utils/helpers';
 
-import ChatFooter from '@/ui/components/chat-footer/chat-footer';
-import ChatHeader from '@/ui/components/chat-header/chat-header';
-import ChatList from '@/ui/components/chat-list/chat-list';
-import AddChatForm from '@/ui/components/form/AddChatForm/AddChatForm';
-import Header from '@/ui/components/header/header';
-import MessageView from '@/ui/components/message-view/message-view';
-import ModalBackdrop from '@/ui/components/ModalBackdrop/ModalBackdrop';
+import ChatsController from 'src/controllers/ChatsController';
+
+import ChatFooter from 'src/ui/components/chat-footer/chat-footer';
+import ChatHeader from 'src/ui/components/chat-header/chat-header';
+import ChatList from 'src/ui/components/chat-list/chat-list';
+import AddChatForm from 'src/ui/components/form/AddChatForm/AddChatForm';
+import Header from 'src/ui/components/header/header';
+import MessageView from 'src/ui/components/message-view/message-view';
+import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
 
 import template from './messenger.tpl.pug';
 
-import ChatsController from '@/controllers/ChatsController';
-import store from '@/store/Store';
+import store from 'src/store/Store';
 
 class MessengerPage extends Block {
   protected initChildren() {

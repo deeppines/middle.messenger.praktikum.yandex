@@ -1,4 +1,4 @@
-import { IProfileItem, IUser } from '@/types';
+import { IProfileItem, IUser } from 'src/types';
 
 export const getProfileItems = (props: IUser): IProfileItem[] => {
   const items: IProfileItem[] = [];

@@ -1,15 +1,16 @@
-import { TEvents } from '@/types/common';
+import { TEvents } from 'src/types/common';
 
-import Block from '@/utils/Block';
+import { MESSAGE } from 'src/constants';
 
-import Button from '@/ui/elements/button/button';
-import Icon from '@/ui/elements/icon/icon';
-import Input from '@/ui/elements/input/input';
+import Block from 'src/utils/Block';
+
+import Button from 'src/ui/elements/button/button';
+import Icon from 'src/ui/elements/icon/icon';
+import Input from 'src/ui/elements/input/input';
 
 import template from './message-form.tpl.pug';
 
-import arrowLeft from '@/assets/icons/arrow-left.svg';
-import { MESSAGE } from '@/constants';
+import arrowLeft from 'src/assets/icons/arrow-left.svg';
 
 interface IMessageForm {
   events?: TEvents;

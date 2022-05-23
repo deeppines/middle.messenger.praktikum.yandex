@@ -1,14 +1,15 @@
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
 
-import Icon from '@/ui/elements/icon/icon';
-import MessageForm from '@/ui/components/message-form/message-form';
+import ChatsController from 'src/controllers/ChatsController';
+
+import Icon from 'src/ui/elements/icon/icon';
+import MessageForm from 'src/ui/components/message-form/message-form';
 
 import template from './chat-footer.tpl.pug';
 
-import iconClip from '@/assets/icons/icon-clip.svg';
-import ChatsController from '@/controllers/ChatsController';
-import { withActiveChat } from '@/hoc';
+import iconClip from 'src/assets/icons/icon-clip.svg';
+import { withActiveChat } from 'src/hoc';
 
 class ChatFooter extends Block {
   protected initChildren() {

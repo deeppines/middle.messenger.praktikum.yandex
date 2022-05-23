@@ -1,15 +1,16 @@
-import { IPasswordFormData } from '@/types';
+import { IPasswordFormData } from 'src/types';
 
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
 
-import Icon from '@/ui/elements/icon/icon';
-import ProfileChangePassword from '@/ui/components/profile-change-password/profile-change-password';
+import UserController from 'src/controllers/UserController';
+
+import Icon from 'src/ui/elements/icon/icon';
+import ProfileChangePassword from 'src/ui/components/profile-change-password/profile-change-password';
 
 import template from './password.tpl.pug';
 
-import arrowLeft from '@/assets/icons/arrow-left.svg';
-import UserController from '@/controllers/UserController';
+import arrowLeft from 'src/assets/icons/arrow-left.svg';
 
 class PasswordPage extends Block {
   protected initChildren() {

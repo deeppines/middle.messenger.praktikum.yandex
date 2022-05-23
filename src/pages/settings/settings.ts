@@ -1,15 +1,16 @@
-import { IUser } from '@/types';
+import { IUser } from 'src/types';
 
-import Block from '@/utils/Block';
-import { formDataToObject } from '@/utils/formDataToObject';
+import Block from 'src/utils/Block';
+import { formDataToObject } from 'src/utils/formDataToObject';
 
-import Icon from '@/ui/elements/icon/icon';
-import ProfileChangeInfo from '@/ui/components/profile-change-info/profile-change-info';
+import UserController from 'src/controllers/UserController';
+
+import Icon from 'src/ui/elements/icon/icon';
+import ProfileChangeInfo from 'src/ui/components/profile-change-info/profile-change-info';
 
 import template from './settings.tpl.pug';
 
-import arrowLeft from '@/assets/icons/arrow-left.svg';
-import UserController from '@/controllers/UserController';
+import arrowLeft from 'src/assets/icons/arrow-left.svg';
 
 class SettingsPage extends Block {
   protected initChildren() {

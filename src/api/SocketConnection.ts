@@ -1,9 +1,10 @@
 /* eslint-disable no-restricted-syntax */
-import { sortMessages } from '@/utils/sortMessages';
-import { transformDateInMsg } from '@/utils/transformDateInMsg';
+import { BASE_SOCKET_URL } from 'src/constants';
 
-import { BASE_SOCKET_URL } from '@/constants';
-import store from '@/store/Store';
+import { sortMessages } from 'src/utils/sortMessages';
+import { transformDateInMsg } from 'src/utils/transformDateInMsg';
+
+import store from 'src/store/Store';
 
 export default class SocketConnection {
   protected socket;

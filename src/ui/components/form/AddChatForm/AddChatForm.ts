@@ -1,9 +1,9 @@
-import { TEvents } from '@/types';
+import { TEvents } from 'src/types';
 
-import Block from '@/utils/Block';
+import Block from 'src/utils/Block';
 
-import Button from '@/ui/elements/button/button';
-import FormField from '@/ui/components/form-field/form-field';
+import Button from 'src/ui/elements/button/button';
+import FormField from 'src/ui/components/form-field/form-field';
 
 import template from './AddChatForm.tpl.pug';
 
