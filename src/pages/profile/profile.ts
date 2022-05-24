@@ -4,7 +4,7 @@ import { closeModal } from 'src/utils/helpers';
 import UserController from 'src/controllers/UserController';
 
 import Icon from 'src/ui/elements/Icon/Icon';
-import ChangeAvatarForm from 'src/ui/components/form/ChangeAvatarForm/ChangeAvatarForm';
+import ChangeAvatarForm from 'src/ui/components/Form/ChangeAvatarForm/ChangeAvatarForm';
 import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
 import Profile from 'src/ui/components/Profile/Profile';
 

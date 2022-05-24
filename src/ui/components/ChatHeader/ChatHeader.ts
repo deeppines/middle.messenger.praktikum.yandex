@@ -7,8 +7,8 @@ import ChatsController from 'src/controllers/ChatsController';
 import Button from 'src/ui/elements/Button/Button';
 import Icon from 'src/ui/elements/Icon/Icon';
 
-import DelChatForm from '../form/DelChatForm/DelChatForm';
-import UserChatForm from '../form/UserChatForm/UserChatForm';
+import DelChatForm from '../Form/DelChatForm/DelChatForm';
+import UserChatForm from '../Form/UserChatForm/UserChatForm';
 import ModalBackdrop from '../ModalBackdrop/ModalBackdrop';
 
 import template from './ChatHeader.tpl.pug';
