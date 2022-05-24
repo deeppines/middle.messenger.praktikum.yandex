@@ -6,9 +6,9 @@ import { closeModal } from 'src/utils/helpers';
 
 import ChatsController from 'src/controllers/ChatsController';
 
-import ChatHeader from 'src/ui/components/chat-header/chat-header';
 import ChatList from 'src/ui/components/chat-list/chat-list';
 import ChatFooter from 'src/ui/components/ChatFooter/ChatFooter';
+import ChatHeader from 'src/ui/components/ChatHeader/ChatHeader';
 import AddChatForm from 'src/ui/components/form/AddChatForm/AddChatForm';
 import Header from 'src/ui/components/header/header';
 import MessageView from 'src/ui/components/message-view/message-view';

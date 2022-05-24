@@ -11,7 +11,7 @@ import DelChatForm from '../form/DelChatForm/DelChatForm';
 import UserChatForm from '../form/UserChatForm/UserChatForm';
 import ModalBackdrop from '../ModalBackdrop/ModalBackdrop';
 
-import template from './chat-header.tpl.pug';
+import template from './ChatHeader.tpl.pug';
 
 import iconAdd from 'src/assets/icons/icon-add.svg';
 import iconCrossCircle from 'src/assets/icons/icon-cross-circle.svg';
