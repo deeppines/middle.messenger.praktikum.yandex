@@ -4,7 +4,7 @@ import Block from 'src/utils/Block';
 
 import Icon from 'src/ui/elements/Icon/Icon';
 
-import template from './search.tpl.pug';
+import template from './Search.tpl.pug';
 
 import iconSearch from 'src/assets/icons/icon-search.svg';
 

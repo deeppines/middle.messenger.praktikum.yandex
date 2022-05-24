@@ -3,7 +3,7 @@ import { formDataToObject } from 'src/utils/formDataToObject';
 
 import Icon from 'src/ui/elements/Icon/Icon';
 import Link from 'src/ui/elements/Link/Link';
-import Search from 'src/ui/components/search/search';
+import Search from 'src/ui/components/Search/Search';
 
 import template from './Header.tpl.pug';
 
