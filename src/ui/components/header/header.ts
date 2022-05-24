@@ -5,7 +5,7 @@ import Icon from 'src/ui/elements/Icon/Icon';
 import Link from 'src/ui/elements/Link/Link';
 import Search from 'src/ui/components/search/search';
 
-import template from './header.tpl.pug';
+import template from './Header.tpl.pug';
 
 import arrowRight from 'src/assets/icons/arrow-right.svg';
 
