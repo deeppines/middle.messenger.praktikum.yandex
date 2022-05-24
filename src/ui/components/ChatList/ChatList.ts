@@ -5,7 +5,7 @@ import { openModal } from 'src/utils/helpers';
 
 import Button from 'src/ui/elements/Button/Button';
 
-import template from './chat-list.tpl.pug';
+import template from './ChatList.tpl.pug';
 
 import { withChats } from 'src/hoc';
 
