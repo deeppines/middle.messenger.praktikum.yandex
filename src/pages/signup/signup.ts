@@ -5,7 +5,7 @@ import { formDataToObject } from 'src/utils/formDataToObject';
 
 import AuthController from 'src/controllers/AuthController';
 
-import SignupForm from 'src/ui/components/form/signup-form/signup-form';
+import SignupForm from 'src/ui/components/form/SignupForm/SignupForm';
 
 import template from './signup.tpl.pug';
 
