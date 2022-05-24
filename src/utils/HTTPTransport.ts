@@ -2,6 +2,8 @@ import { Options, OptionsWithoutMethod } from 'src/types';
 
 import { BASE_URL, Method } from 'src/constants';
 
+import { isPlainObject } from './helpers';
+
 class HTTPTransport {
   static API_URL = BASE_URL;
   protected endpoint: string;
@@ -68,10 +70,14 @@ class HTTPTransport {
       xhr.withCredentials = true;
       xhr.responseType = 'json';
 
+      if (isPlainObject(data)) {
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      }
+
       if (method === Method.GET || !data) {
         xhr.send();
       } else {
-        xhr.send(data);
+        xhr.send(isPlainObject(data) ? JSON.stringify(data) : data);
       }
     });
   }
