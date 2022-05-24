@@ -6,7 +6,7 @@ import ChatsController from 'src/controllers/ChatsController';
 import Icon from 'src/ui/elements/Icon/Icon';
 import MessageForm from 'src/ui/components/message-form/message-form';
 
-import template from './chat-footer.tpl.pug';
+import template from './ChatFooter.tpl.pug';
 
 import iconClip from 'src/assets/icons/icon-clip.svg';
 import { withActiveChat } from 'src/hoc';
