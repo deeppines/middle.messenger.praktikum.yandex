@@ -1,4 +1,8 @@
+import { isDate } from './isDate';
+
 export const setFormat = (day: Date) => {
+  if (!isDate(day)) return '';
+
   const oneDay = 86400000;
   const week = oneDay * 7;
   const now = new Date();
