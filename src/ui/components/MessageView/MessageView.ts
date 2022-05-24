@@ -2,7 +2,7 @@ import { IMessageItem } from 'src/types';
 
 import Block from 'src/utils/Block';
 
-import template from './message-view.tpl.pug';
+import template from './MessageView.tpl.pug';
 
 import { withActiveChat } from 'src/hoc';
 import { withUser } from 'src/hoc/withUser';
