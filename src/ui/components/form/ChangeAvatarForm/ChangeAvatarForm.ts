@@ -5,7 +5,7 @@ import { addClass, removeClass } from 'src/utils/helpers';
 
 import Button from 'src/ui/elements/Button/Button';
 
-import FormField from '../../form-field/form-field';
+import FormField from '../../FormField/FormField';
 
 import template from './ChangeAvatarForm.tpl.pug';
 

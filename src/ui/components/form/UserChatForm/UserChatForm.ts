@@ -5,7 +5,7 @@ import { LOGIN } from 'src/constants';
 import Block from 'src/utils/Block';
 
 import Button from 'src/ui/elements/Button/Button';
-import FormField from 'src/ui/components/form-field/form-field';
+import FormField from 'src/ui/components/FormField/FormField';
 
 import template from './UserChatForm.tpl.pug';
 

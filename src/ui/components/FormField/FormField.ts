@@ -6,7 +6,7 @@ import { getValidationMsg, isValid } from 'src/utils/validation';
 
 import Input, { IInput } from 'src/ui/elements/Input/Input';
 
-import template from './form-field.tpl.pug';
+import template from './FormField.tpl.pug';
 
 interface IFormField {
   inputProps: IInput;

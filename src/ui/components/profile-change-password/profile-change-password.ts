@@ -7,7 +7,7 @@ import { getAvatarPlug } from 'src/utils/getAvatarPlug';
 
 import Button from 'src/ui/elements/Button/Button';
 import Link from 'src/ui/elements/Link/Link';
-import FormField from 'src/ui/components/form-field/form-field';
+import FormField from 'src/ui/components/FormField/FormField';
 
 import template from './profile-change-password.tpl.pug';
 
