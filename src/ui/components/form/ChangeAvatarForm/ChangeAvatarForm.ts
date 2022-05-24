@@ -3,7 +3,7 @@ import { TEvents } from 'src/types';
 import Block from 'src/utils/Block';
 import { addClass, removeClass } from 'src/utils/helpers';
 
-import Button from 'src/ui/elements/button/button';
+import Button from 'src/ui/elements/Button/Button';
 
 import FormField from '../../form-field/form-field';
 

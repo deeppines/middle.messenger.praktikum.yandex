@@ -5,7 +5,7 @@ import { closeModal } from 'src/utils/helpers';
 
 import ChatsController from 'src/controllers/ChatsController';
 
-import Button from 'src/ui/elements/button/button';
+import Button from 'src/ui/elements/Button/Button';
 
 import template from './DelChatForm.tpl.pug';
 

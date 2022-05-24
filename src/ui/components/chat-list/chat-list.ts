@@ -3,7 +3,7 @@ import { IChatItem, TEvents } from 'src/types';
 import Block from 'src/utils/Block';
 import { openModal } from 'src/utils/helpers';
 
-import Button from 'src/ui/elements/button/button';
+import Button from 'src/ui/elements/Button/Button';
 
 import template from './chat-list.tpl.pug';
 

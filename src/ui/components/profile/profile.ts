@@ -5,7 +5,7 @@ import { openModal } from 'src/utils/helpers';
 
 import AuthController from 'src/controllers/AuthController';
 
-import Button from 'src/ui/elements/button/button';
+import Button from 'src/ui/elements/Button/Button';
 import Link from 'src/ui/elements/link/link';
 
 import template from './profile.tpl.pug';

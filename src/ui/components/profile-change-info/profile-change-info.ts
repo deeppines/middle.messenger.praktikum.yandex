@@ -5,7 +5,7 @@ import { EMAIL, LOGIN, NAME, PHONE } from 'src/constants';
 import Block from 'src/utils/Block';
 import { getAvatarPlug } from 'src/utils/getAvatarPlug';
 
-import Button from 'src/ui/elements/button/button';
+import Button from 'src/ui/elements/Button/Button';
 import Link from 'src/ui/elements/link/link';
 import FormField from 'src/ui/components/form-field/form-field';
 
