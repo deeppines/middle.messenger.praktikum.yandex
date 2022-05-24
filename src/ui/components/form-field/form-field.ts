@@ -4,7 +4,7 @@ import Block from 'src/utils/Block';
 import { addClass, inputHasValue, removeClass, setMessage } from 'src/utils/helpers';
 import { getValidationMsg, isValid } from 'src/utils/validation';
 
-import Input, { IInput } from 'src/ui/elements/input/input';
+import Input, { IInput } from 'src/ui/elements/Input/Input';
 
 import template from './form-field.tpl.pug';
 

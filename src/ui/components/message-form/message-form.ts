@@ -6,7 +6,7 @@ import Block from 'src/utils/Block';
 
 import Button from 'src/ui/elements/Button/Button';
 import Icon from 'src/ui/elements/Icon/Icon';
-import Input from 'src/ui/elements/input/input';
+import Input from 'src/ui/elements/Input/Input';
 
 import template from './message-form.tpl.pug';
 

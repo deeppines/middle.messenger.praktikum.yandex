@@ -2,7 +2,7 @@ import { TEvents } from 'src/types/common';
 
 import Block from 'src/utils/Block';
 
-import template from './input.tpl.pug';
+import template from './Input.tpl.pug';
 
 export interface IInput {
   type: string;
