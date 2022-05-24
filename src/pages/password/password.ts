@@ -6,7 +6,7 @@ import { formDataToObject } from 'src/utils/formDataToObject';
 import UserController from 'src/controllers/UserController';
 
 import Icon from 'src/ui/elements/Icon/Icon';
-import ProfileChangePassword from 'src/ui/components/profile-change-password/profile-change-password';
+import ProfileChangePassword from 'src/ui/components/ProfileChangePassword/ProfileChangePassword';
 
 import template from './password.tpl.pug';
 
