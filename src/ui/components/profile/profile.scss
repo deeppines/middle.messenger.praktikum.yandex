@@ -57,7 +57,19 @@
   }
 
   &__field {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+    .input {
+      margin-bottom: 12px;
+    }
+
     .form-field__msg {
+      position: absolute;
+      top: 23px;
+      right: 0;
       padding-top: 0;
       text-align: right;
     }
