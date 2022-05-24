@@ -9,7 +9,7 @@ import Button from 'src/ui/elements/Button/Button';
 import Link from 'src/ui/elements/Link/Link';
 import FormField from 'src/ui/components/FormField/FormField';
 
-import template from './profile-change-info.tpl.pug';
+import template from './ProfileChangeInfo.tpl.pug';
 
 import { withUser } from 'src/hoc/withUser';
 

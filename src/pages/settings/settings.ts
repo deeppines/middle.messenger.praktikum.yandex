@@ -6,7 +6,7 @@ import { formDataToObject } from 'src/utils/formDataToObject';
 import UserController from 'src/controllers/UserController';
 
 import Icon from 'src/ui/elements/Icon/Icon';
-import ProfileChangeInfo from 'src/ui/components/profile-change-info/profile-change-info';
+import ProfileChangeInfo from 'src/ui/components/ProfileChangeInfo/ProfileChangeInfo';
 
 import template from './settings.tpl.pug';
 
