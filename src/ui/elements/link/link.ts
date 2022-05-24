@@ -1,6 +1,6 @@
 import Block from 'src/utils/Block';
 
-import template from './link.tpl.pug';
+import template from './Link.tpl.pug';
 
 interface ILink {
   url: string;

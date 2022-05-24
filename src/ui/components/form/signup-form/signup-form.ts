@@ -5,7 +5,7 @@ import { EMAIL, LOGIN, NAME, PASSWORD, PHONE } from 'src/constants';
 import Block from 'src/utils/Block';
 
 import Button from 'src/ui/elements/Button/Button';
-import Link from 'src/ui/elements/link/link';
+import Link from 'src/ui/elements/Link/Link';
 import FormField from 'src/ui/components/form-field/form-field';
 
 import template from './signup-form.tpl.pug';
