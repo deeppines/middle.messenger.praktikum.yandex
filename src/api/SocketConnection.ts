@@ -45,7 +45,7 @@ export default class SocketConnection {
       // console.log('Получены данные', event.data);
       const data = JSON.parse(event.data);
 
-      if (data && data.type !== 'error' && data.type !== 'pong') {
+      if (data && data.type !== 'error' && data.type !== 'pong' && data.type !== 'user connected') {
         sortMessages(data);
         transformDateInMsg(data);
 
