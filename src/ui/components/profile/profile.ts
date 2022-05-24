@@ -8,7 +8,7 @@ import AuthController from 'src/controllers/AuthController';
 import Button from 'src/ui/elements/Button/Button';
 import Link from 'src/ui/elements/Link/Link';
 
-import template from './profile.tpl.pug';
+import template from './Profile.tpl.pug';
 
 import { withUser } from 'src/hoc/withUser';
 

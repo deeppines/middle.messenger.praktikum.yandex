@@ -6,7 +6,7 @@ import UserController from 'src/controllers/UserController';
 import Icon from 'src/ui/elements/Icon/Icon';
 import ChangeAvatarForm from 'src/ui/components/form/ChangeAvatarForm/ChangeAvatarForm';
 import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
-import Profile from 'src/ui/components/profile/profile';
+import Profile from 'src/ui/components/Profile/Profile';
 
 import template from './profile.tpl.pug';
 
