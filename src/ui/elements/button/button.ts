@@ -2,7 +2,7 @@ import { TEvents } from 'src/types';
 
 import Block from 'src/utils/Block';
 
-import template from './button.tpl.pug';
+import template from './Button.tpl.pug';
 
 interface IButton {
   type: string;

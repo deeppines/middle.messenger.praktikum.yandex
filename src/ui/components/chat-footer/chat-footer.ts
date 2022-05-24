@@ -3,7 +3,7 @@ import { formDataToObject } from 'src/utils/formDataToObject';
 
 import ChatsController from 'src/controllers/ChatsController';
 
-import Icon from 'src/ui/elements/icon/icon';
+import Icon from 'src/ui/elements/Icon/Icon';
 import MessageForm from 'src/ui/components/message-form/message-form';
 
 import template from './chat-footer.tpl.pug';

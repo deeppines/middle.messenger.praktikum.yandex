@@ -2,7 +2,7 @@ import { TEvents } from 'src/types/common';
 
 import Block from 'src/utils/Block';
 
-import Icon from 'src/ui/elements/icon/icon';
+import Icon from 'src/ui/elements/Icon/Icon';
 
 import template from './search.tpl.pug';
 

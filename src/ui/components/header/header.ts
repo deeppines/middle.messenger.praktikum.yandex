@@ -1,7 +1,7 @@
 import Block from 'src/utils/Block';
 import { formDataToObject } from 'src/utils/formDataToObject';
 
-import Icon from 'src/ui/elements/icon/icon';
+import Icon from 'src/ui/elements/Icon/Icon';
 import Link from 'src/ui/elements/link/link';
 import Search from 'src/ui/components/search/search';
 

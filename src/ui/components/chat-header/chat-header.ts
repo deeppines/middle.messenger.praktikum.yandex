@@ -5,7 +5,7 @@ import { closeModal, openModal } from 'src/utils/helpers';
 import ChatsController from 'src/controllers/ChatsController';
 
 import Button from 'src/ui/elements/Button/Button';
-import Icon from 'src/ui/elements/icon/icon';
+import Icon from 'src/ui/elements/Icon/Icon';
 
 import DelChatForm from '../form/DelChatForm/DelChatForm';
 import UserChatForm from '../form/UserChatForm/UserChatForm';
