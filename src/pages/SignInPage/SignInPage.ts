@@ -7,9 +7,9 @@ import AuthController from 'src/controllers/AuthController';
 
 import SigninForm from 'src/ui/components/Form/SigninForm/SigninForm';
 
-import template from './signin.tpl.pug';
+import template from './SignInPage.tpl.pug';
 
-class SigninPage extends Block {
+class SignInPage extends Block {
   protected initChildren() {
     this.childrens.form = new SigninForm({
       events: {
@@ -33,4 +33,4 @@ class SigninPage extends Block {
   }
 }
 
-export default SigninPage;
+export default SignInPage;

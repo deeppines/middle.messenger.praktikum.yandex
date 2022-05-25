@@ -8,7 +8,7 @@ import UserController from 'src/controllers/UserController';
 import Icon from 'src/ui/elements/Icon/Icon';
 import ProfileChangeInfo from 'src/ui/components/ProfileChangeInfo/ProfileChangeInfo';
 
-import template from './settings.tpl.pug';
+import template from './SettingsPage.tpl.pug';
 
 import arrowLeft from 'src/assets/icons/arrow-left.svg';
 

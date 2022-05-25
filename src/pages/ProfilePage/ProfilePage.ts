@@ -8,7 +8,7 @@ import ChangeAvatarForm from 'src/ui/components/Form/ChangeAvatarForm/ChangeAvat
 import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
 import Profile from 'src/ui/components/Profile/Profile';
 
-import template from './profile.tpl.pug';
+import template from './ProfilePage.tpl.pug';
 
 import arrowLeft from 'src/assets/icons/arrow-left.svg';
 class ProfilePage extends Block {

@@ -1,8 +1,8 @@
 import Block from 'src/utils/Block';
 
-import template from './404.tpl.pug';
+import template from './ServerErrorPage.tpl.pug';
 
-class ClientErrorPage extends Block {
+class ServerErrorPage extends Block {
   constructor() {
     super();
   }
@@ -12,4 +12,4 @@ class ClientErrorPage extends Block {
   }
 }
 
-export default ClientErrorPage;
+export default ServerErrorPage;

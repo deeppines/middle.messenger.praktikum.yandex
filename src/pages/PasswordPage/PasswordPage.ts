@@ -8,7 +8,7 @@ import UserController from 'src/controllers/UserController';
 import Icon from 'src/ui/elements/Icon/Icon';
 import ProfileChangePassword from 'src/ui/components/ProfileChangePassword/ProfileChangePassword';
 
-import template from './password.tpl.pug';
+import template from './PasswordPage.tpl.pug';
 
 import arrowLeft from 'src/assets/icons/arrow-left.svg';
 

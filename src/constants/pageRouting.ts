@@ -2,23 +2,23 @@ import { IPage } from 'src/types';
 
 import { PagePaths } from './pagePaths';
 
-import ClientErrorPage from 'src/pages/404/404';
-import MessengerPage from 'src/pages/messenger/messenger';
-import PasswordPage from 'src/pages/password/password';
-import ProfilePage from 'src/pages/profile/profile';
-import SettingsPage from 'src/pages/settings/settings';
-import SigninPage from 'src/pages/signin/signin';
-import SignupPage from 'src/pages/signup/signup';
+import ClientErrorPage from 'src/pages/ClientErrorPage/ClientErrorPage';
+import MessengerPage from 'src/pages/MessengerPage/MessengerPage';
+import PasswordPage from 'src/pages/PasswordPage/PasswordPage';
+import ProfilePage from 'src/pages/ProfilePage/ProfilePage';
+import SettingsPage from 'src/pages/SettingsPage/SettingsPage';
+import SignInPage from 'src/pages/SignInPage/SignInPage';
+import SignUpPage from 'src/pages/SignUpPage/SignUpPage';
 
 export const PAGES: IPage[] = [
   {
     path: [PagePaths.Index, PagePaths.Signin],
-    block: SigninPage,
+    block: SignInPage,
     props: { title: 'Вход' },
   },
   {
     path: PagePaths.Signup,
-    block: SignupPage,
+    block: SignUpPage,
     props: { title: 'Регистрация' },
   },
   {

@@ -14,7 +14,7 @@ import Header from 'src/ui/components/Header/Header';
 import MessageView from 'src/ui/components/MessageView/MessageView';
 import ModalBackdrop from 'src/ui/components/ModalBackdrop/ModalBackdrop';
 
-import template from './messenger.tpl.pug';
+import template from './MessengerPage.tpl.pug';
 
 import store from 'src/store/Store';
 
