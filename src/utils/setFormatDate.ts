@@ -1,4 +1,4 @@
-import { isDate } from './isDate';
+import { isDate } from './isDate/isDate';
 
 export const setFormat = (day: Date) => {
   if (!isDate(day)) return '';
