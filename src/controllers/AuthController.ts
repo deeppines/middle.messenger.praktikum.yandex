@@ -2,7 +2,7 @@ import { ISignInData, ISignUpFormData } from 'src/types';
 
 import { PagePaths } from 'src/constants';
 
-import { getPathname } from 'src/utils/getPathname';
+import { getPathname } from 'src/utils/getPathname/getPathname';
 
 import AuthAPI from 'src/api/AuthAPI';
 
