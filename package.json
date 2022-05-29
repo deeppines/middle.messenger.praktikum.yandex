@@ -15,7 +15,7 @@
     "dev": "parcel ./src/pages/**/*.html --port 3000",
     "build": "parcel build ./src/pages/*.html ./src/pages/**/*.html --no-scope-hoist --no-source-maps --no-cache",
     "test": "./node_modules/.bin/mocha",
-    "lint": "tsc --noEmit && eslint --fix ./src/**/*.ts && npx stylelint ./src/**/*.scss --fix",
+    "lint": "tsc --noEmit && eslint --fix ./src/**/*.ts && npx stylelint ./src/**/*.scss --fix && npm run test",
     "prepare": "husky install"
   },
   "dependencies": {
