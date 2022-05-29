@@ -13,6 +13,7 @@ import { withActiveChat } from 'src/hoc';
 
 interface IDelChatForm {
   modalId: string;
+  chatId: any;
   events?: TEvents;
 }
 
@@ -37,7 +38,7 @@ class DelChatForm extends Block {
       name: 'accept',
       text: 'Удалить',
       events: {
-        click: () => this.delChatHandler(this.props.id),
+        click: () => this.delChatHandler(this.props.chat.id),
       },
     });
   }
