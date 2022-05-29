@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
 import { BASE_SOCKET_URL } from 'src/constants';
 
-import { sortMessages } from 'src/utils/sortMessages';
+import { sortMessages } from 'src/utils/sortMessages/sortMessages';
 import { transformDateInMsg } from 'src/utils/transformDateInMsg';
 
 import store from 'src/store/Store';
