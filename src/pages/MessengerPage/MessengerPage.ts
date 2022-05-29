@@ -1,6 +1,6 @@
 import { IChatCreate } from 'src/types';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { formDataToObject } from 'src/utils/formDataToObject';
 import { closeModal } from 'src/utils/helpers';
 

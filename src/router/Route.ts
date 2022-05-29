@@ -1,4 +1,4 @@
-import Block from '../utils/Block';
+import Block from '../utils/Block/Block';
 import renderDOM from '../utils/renderDOM';
 import { updatePageTitle } from '../utils/updatePageTitle';
 

@@ -1,6 +1,6 @@
 import { TEvents } from 'src/types/common';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 
 import Icon from 'src/ui/elements/Icon/Icon';
 

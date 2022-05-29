@@ -1,4 +1,4 @@
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { getAvatarPlug } from 'src/utils/getAvatarPlug';
 import { getProfileItems } from 'src/utils/getProfileItems';
 import { openModal } from 'src/utils/helpers';

@@ -1,6 +1,6 @@
 import { TEvents } from 'src/types/common';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { addClass, inputHasValue, removeClass, setMessage } from 'src/utils/helpers';
 import { getValidationMsg, isValid } from 'src/utils/validation';
 

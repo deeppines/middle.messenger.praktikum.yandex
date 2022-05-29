@@ -2,7 +2,7 @@ import { TEvents } from 'src/types/common';
 
 import { PASSWORD } from 'src/constants';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { getAvatarPlug } from 'src/utils/getAvatarPlug';
 
 import Button from 'src/ui/elements/Button/Button';

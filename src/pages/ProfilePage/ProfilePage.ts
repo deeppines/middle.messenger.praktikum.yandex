@@ -1,4 +1,4 @@
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { closeModal } from 'src/utils/helpers';
 
 import UserController from 'src/controllers/UserController';

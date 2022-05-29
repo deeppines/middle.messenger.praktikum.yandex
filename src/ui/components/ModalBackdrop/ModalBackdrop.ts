@@ -1,6 +1,6 @@
 import { TEvents } from 'src/types';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 
 import template from './ModalBackdrop.tpl.pug';
 

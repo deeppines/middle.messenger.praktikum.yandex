@@ -1,4 +1,4 @@
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 
 import template from './ClientErrorPage.tpl.pug';
 

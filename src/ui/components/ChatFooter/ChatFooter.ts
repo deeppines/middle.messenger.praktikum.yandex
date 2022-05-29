@@ -1,4 +1,4 @@
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { formDataToObject } from 'src/utils/formDataToObject';
 
 import ChatsController from 'src/controllers/ChatsController';

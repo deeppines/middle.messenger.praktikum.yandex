@@ -1,6 +1,6 @@
 import { ISignUpFormData } from 'src/types';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { formDataToObject } from 'src/utils/formDataToObject';
 
 import AuthController from 'src/controllers/AuthController';

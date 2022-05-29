@@ -1,4 +1,4 @@
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { isEqual } from 'src/utils/helpers';
 
 import store, { IState, StoreEvents } from 'src/store/Store';

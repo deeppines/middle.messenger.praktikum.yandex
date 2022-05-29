@@ -2,7 +2,7 @@ import { TEvents } from 'src/types/common';
 
 import { MESSAGE } from 'src/constants';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 
 import Button from 'src/ui/elements/Button/Button';
 import Icon from 'src/ui/elements/Icon/Icon';

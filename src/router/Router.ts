@@ -1,6 +1,6 @@
 import { APP_SELECTOR, PagePaths } from 'src/constants';
 
-import Block from '../utils/Block';
+import Block from '../utils/Block/Block';
 
 import Route from './Route';
 

@@ -1,6 +1,6 @@
 import { TEvents } from 'src/types';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 import { addClass, removeClass } from 'src/utils/helpers';
 
 import Button from 'src/ui/elements/Button/Button';

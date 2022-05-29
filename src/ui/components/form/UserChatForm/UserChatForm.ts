@@ -2,7 +2,7 @@ import { TEvents } from 'src/types';
 
 import { LOGIN } from 'src/constants';
 
-import Block from 'src/utils/Block';
+import Block from 'src/utils/Block/Block';
 
 import Button from 'src/ui/elements/Button/Button';
 import FormField from 'src/ui/components/FormField/FormField';
