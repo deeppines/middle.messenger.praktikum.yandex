@@ -4,7 +4,7 @@ import { expect } from 'chai';
 import { describe } from 'mocha';
 import jsdom from 'mocha-jsdom';
 
-describe('Test for updatePageTitle util', () => {
+describe('updatePageTitle util', () => {
   jsdom({ url: 'http://localhost' });
 
   it('should be change title', () => {
