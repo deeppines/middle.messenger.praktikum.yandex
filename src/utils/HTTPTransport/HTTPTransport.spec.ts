@@ -1,12 +1,26 @@
 import HTTPTransport from './HTTPTransport';
 
 import { expect } from 'chai';
-import { describe } from 'mocha';
+import { before, describe } from 'mocha';
 import jsdom from 'mocha-jsdom';
 
 describe('HTTPTransport util', () => {
   const baseUrl = 'http://localhost:1234';
   jsdom({ url: baseUrl });
+
+  before((done) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        expect(xhr.response).to.have.property('message').and.equal('Server is running');
+      }
+    };
+
+    xhr.open('get', `${baseUrl}/mock`);
+    xhr.send();
+    done();
+  });
 
   it('GET - should return true', async () => {
     const endpoint = '/api/test/get';

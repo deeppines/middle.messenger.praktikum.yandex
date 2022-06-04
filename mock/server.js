@@ -19,6 +19,10 @@ server.use((req, res, next) => {
 });
 
 // API
+server.get('/mock', (req, res) => {
+  return res.jsonp({message: 'Server is running'});
+});
+
 server.get('/api/test/get', (req, res) => {
   const SUCCESS = require('./data/SUCCESS.json');
 
