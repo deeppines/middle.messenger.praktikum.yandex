@@ -8,7 +8,7 @@ import store from 'src/store/Store';
 
 export default class SocketConnection {
   protected socket;
-  protected timerId?: number;
+  protected timerId?: NodeJS.Timeout;
 
   constructor(endpoint: string) {
     this.socket = new WebSocket(`${BASE_SOCKET_URL}${endpoint}`);

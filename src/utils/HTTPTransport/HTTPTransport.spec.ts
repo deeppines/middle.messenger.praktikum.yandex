@@ -8,7 +8,8 @@ describe('HTTPTransport util', () => {
   const baseUrl = 'http://localhost:1234';
   jsdom({ url: baseUrl });
 
-  before((done) => {
+  before(() => {
+    require('../../../mock/server');
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = () => {
@@ -19,7 +20,6 @@ describe('HTTPTransport util', () => {
 
     xhr.open('get', `${baseUrl}/mock`);
     xhr.send();
-    done();
   });
 
   it('GET - should return true', async () => {

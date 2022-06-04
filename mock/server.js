@@ -59,3 +59,5 @@ server.listen(1234, () => {
   // eslint-disable-next-line no-console
   console.info('JSON Server is running on port 1234');
 });
+
+module.exports = server;
