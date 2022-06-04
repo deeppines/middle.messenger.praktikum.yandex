@@ -14,7 +14,7 @@
     "start": "npm i && npm run build && node ./server.js",
     "dev": "parcel ./src/pages/**/*.html --port 3000",
     "build": "parcel build ./src/pages/*.html ./src/pages/**/*.html --no-scope-hoist --no-source-maps --no-cache",
-    "test": "mocha --require ts-node/register src/**/*.spec.ts",
+    "test": "mocha --require ts-node/register --require tsconfig-paths/register src/**/*.spec.ts",
     "mocha": "./node_modules/.bin/mocha",
     "mock": "node ./mock/server.js",
     "lint": "tsc --noEmit && eslint --fix ./src/**/*.ts && npx stylelint ./src/**/*.scss --fix",
@@ -51,7 +51,7 @@
     "stylelint": "14.8.5",
     "stylelint-config-standard-scss": "4.0.0",
     "ts-node": "10.8.1",
-    "tsconfig-paths": "^4.0.0",
+    "tsconfig-paths": "4.0.0",
     "typescript": "4.7.3"
   },
   "alias": {
