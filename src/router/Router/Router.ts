@@ -1,8 +1,7 @@
 import { APP_SELECTOR, PagePaths } from 'src/constants';
 
-import Block from '../utils/Block/Block';
-
-import Route from './Route';
+import Block from '../../utils/Block/Block';
+import Route from '../Route';
 
 class Router {
   private static __instance: Router;
