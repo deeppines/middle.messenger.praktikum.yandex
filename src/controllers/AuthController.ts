@@ -32,7 +32,6 @@ class AuthController {
 
   async signIn(data: ISignInData) {
     await this.api.signIn(data);
-
     await this.getUser();
 
     router.go(PagePaths.Messanger);
