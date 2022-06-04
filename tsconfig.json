@@ -29,5 +29,19 @@
     "sourceMap": true,
   },
   "exclude": ["node_modules", "dist", "server.js"],
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "ts-node": {
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "src/*": ["./src/*"]
+      },
+      "allowJs": true,
+      "module": "commonjs",
+    },
+    "files": true,
+  },
+  "files": [
+    "src/types/mocha-jsdom.d.ts"
+  ]
 }
