@@ -31,12 +31,8 @@
   "exclude": ["node_modules", "dist", "server.js"],
   "include": ["src/**/*.ts"],
   "ts-node": {
+    "require": ["tsconfig-paths/register"],
     "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "src/*": ["./src/*"]
-      },
-      "allowJs": true,
       "module": "commonjs",
     },
     "files": true,
