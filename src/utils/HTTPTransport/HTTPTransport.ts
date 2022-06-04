@@ -7,8 +7,8 @@ class HTTPTransport {
   static API_URL = BASE_URL;
   protected endpoint: string;
 
-  constructor(endpoint: string) {
-    this.endpoint = `${HTTPTransport.API_URL}${endpoint}`;
+  constructor(endpoint: string, url?: string) {
+    this.endpoint = `${url ? url : HTTPTransport.API_URL}${endpoint}`;
   }
 
   public get(

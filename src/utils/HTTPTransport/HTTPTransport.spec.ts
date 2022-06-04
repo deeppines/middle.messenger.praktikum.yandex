@@ -5,66 +5,51 @@ import { describe } from 'mocha';
 import jsdom from 'mocha-jsdom';
 
 describe('HTTPTransport util', () => {
-  jsdom({ url: 'http://localhost:3000' });
-
-  it('POST - should return true', async () => {
-    const endpoint = '/auth';
-    const http = new HTTPTransport(endpoint);
-    const data = {
-      login: 'deeppines',
-      password: '8mFn2DM99GT9',
-    };
-
-    const response = await http.post('/signin', { data });
-
-    expect(response).to.be.null;
-  });
+  const baseUrl = 'http://localhost:1234';
+  jsdom({ url: baseUrl });
 
   it('GET - should return true', async () => {
-    const endpoint = '/auth';
-    const http = new HTTPTransport(endpoint);
-    const response = await http.get('/user');
+    const endpoint = '/api/test/get';
+    const http = new HTTPTransport(endpoint, baseUrl);
 
-    expect(response).to.have.property('id');
-    expect(response).to.not.have.property('reason');
+    const response = await http.get('');
+
+    expect(response).to.have.property('status').and.equal(200);
+  });
+
+  it('POST - should return true', async () => {
+    const endpoint = '/api/test/post';
+    const http = new HTTPTransport(endpoint, baseUrl);
+
+    const response = await http.post('');
+
+    expect(response).to.have.property('status').and.equal(200);
   });
 
   it('PUT - should return true', async () => {
-    const endpoint = '/chats';
-    const http = new HTTPTransport(endpoint);
-    const data = {
-      users: [0],
-      chatId: 0,
-    };
-    return await http
-      .put('/users', { data })
-      .then((res) => {
-        expect(res).to.be.null;
-      })
-      .catch((res) => {
-        expect(res).to.have.property('reason');
-      });
+    const endpoint = '/api/test/put';
+    const http = new HTTPTransport(endpoint, baseUrl);
+
+    const response = await http.put('');
+
+    expect(response).to.have.property('status').and.equal(200);
   });
 
   it('DELETE - should return true', async () => {
-    const endpoint = '/chats';
-    const http = new HTTPTransport(endpoint);
-    const data = {
-      users: [0],
-      chatId: 0,
-    };
+    const endpoint = '/api/test/delete';
+    const http = new HTTPTransport(endpoint, baseUrl);
 
-    return await http
-      .delete('/users', { data })
-      .then((res) => {
-        expect(res).to.be.null;
-      })
-      .catch((res) => {
-        expect(res).to.have.property('reason');
-      });
+    const response = await http.delete('');
+
+    expect(response).to.have.property('status').and.equal(200);
   });
 
   it('PATCH - should return true', async () => {
-    return;
+    const endpoint = '/api/test/patch';
+    const http = new HTTPTransport(endpoint, baseUrl);
+
+    const response = await http.patch('');
+
+    expect(response).to.have.property('status').and.equal(200);
   });
 });
