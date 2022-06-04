@@ -1,8 +1,7 @@
 import { Options, OptionsWithoutMethod } from 'src/types';
 
-import { BASE_URL, Method } from 'src/constants';
-
-import { isPlainObject } from './helpers';
+import { BASE_URL, Method } from '../../constants/api';
+import { isPlainObject } from '../helpers';
 
 class HTTPTransport {
   static API_URL = BASE_URL;
