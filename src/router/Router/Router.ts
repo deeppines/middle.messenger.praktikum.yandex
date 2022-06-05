@@ -1,4 +1,4 @@
-import { APP_SELECTOR, PagePaths } from 'src/constants';
+import { APP_SELECTOR } from 'src/constants/common';
 
 import Block from '../../utils/Block/Block';
 import Route from '../Route';
@@ -8,11 +8,14 @@ export class Router {
   private routes: Route[] = [];
   private history = window.history;
   private currentRoute: Route | null = null;
+  private pageNotFound: string | null = null;
 
-  constructor() {
+  constructor(pageNotFound?: string) {
     if (Router.__instance) {
       return Router.__instance;
     }
+
+    if (pageNotFound) this.pageNotFound = pageNotFound;
 
     Router.__instance = this;
   }
@@ -58,8 +61,7 @@ export class Router {
     const route = this.getRoute(pathname);
 
     if (!route) {
-      this.go(PagePaths.NotFound);
-
+      if (this.pageNotFound) this.go(this.pageNotFound);
       return;
     }
 
@@ -74,7 +76,3 @@ export class Router {
     return this.routes.find((route) => route.match(pathname));
   }
 }
-
-const router = new Router();
-
-export default router;

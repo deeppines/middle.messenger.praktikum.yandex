@@ -6,7 +6,7 @@ import { closeModal } from 'src/utils/helpers';
 
 import UserAPI from 'src/api/UserAPI';
 
-import router from 'src/router/Router/Router';
+import router from 'src/router/router';
 
 import store from 'src/store/Store';
 

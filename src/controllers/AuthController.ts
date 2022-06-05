@@ -6,7 +6,7 @@ import { getPathname } from 'src/utils/getPathname/getPathname';
 
 import AuthAPI from 'src/api/AuthAPI';
 
-import router from 'src/router/Router/Router';
+import router from 'src/router/router';
 
 import store from 'src/store/Store';
 

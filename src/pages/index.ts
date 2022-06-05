@@ -1,6 +1,6 @@
 import { PAGES } from 'src/constants';
 
-import router from 'src/router/Router/Router';
+import router from 'src/router/router';
 import AuthController from 'src/controllers/AuthController';
 
 document.addEventListener('DOMContentLoaded', async () => {
