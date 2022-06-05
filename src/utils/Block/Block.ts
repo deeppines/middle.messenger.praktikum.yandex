@@ -83,6 +83,10 @@ class Block {
     Object.assign(this.props, nextProps);
   };
 
+  public getProps = () => {
+    return this.props;
+  };
+
   get element(): HTMLElement | null {
     return this._element;
   }
