@@ -23,6 +23,20 @@ npm i
 npm run start
 ```
 
+## Команды
+
+Запуск dev режима
+
+```shell
+npm run dev
+```
+
+Запуск тестирования
+
+```shell
+npm run test
+```
+
 ## Netlify
 
 [Ссылка на Хостинг](https://competent-clarke-aa0ae8.netlify.app/)
