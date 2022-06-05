@@ -23,6 +23,20 @@ npm i
 npm run start
 ```
 
+## Команды
+
+Запуск dev режима
+
+```shell
+npm run dev
+```
+
+Запуск тестирования
+
+```shell
+npm run test
+```
+
 ## Netlify
 
 [Ссылка на Хостинг](https://competent-clarke-aa0ae8.netlify.app/)
@@ -34,4 +48,5 @@ npm run start
 ## Pull Request
 
 [Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)<br>
-[Ссылка для ревью - Sprint-2](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/2)
+[Ссылка для ревью - Sprint-2](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/2)<br>
+[Ссылка для ревью - Sprint-3](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/3)<br>
