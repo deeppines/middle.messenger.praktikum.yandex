@@ -5,11 +5,7 @@ export interface IChatItem {
   title: string;
   avatar: string;
   unread_count: number;
-  last_message?: {
-    user: IUser;
-    time: string;
-    content: string;
-  };
+  last_message?: ILastMessage;
 }
 
 export interface IChatCreate {
@@ -19,4 +15,10 @@ export interface IChatCreate {
 export interface IChatUsersRequest {
   users: number[];
   chatId: number;
+}
+
+export interface ILastMessage {
+  user: IUser;
+  time: string;
+  content: string;
 }
