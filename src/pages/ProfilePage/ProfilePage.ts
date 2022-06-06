@@ -11,6 +11,7 @@ import Profile from 'src/ui/components/Profile/profile';
 import template from './ProfilePage.tpl.pug';
 
 import arrowLeft from 'src/assets/icons/arrow-left.svg';
+
 class ProfilePage extends Block {
   protected initChildren() {
     this.childrens.profile = new Profile({});
