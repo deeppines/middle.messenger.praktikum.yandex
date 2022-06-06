@@ -1,6 +1,6 @@
 import { IChatCreate, IChatUsersRequest, Indexed } from 'src/types';
 
-import { queryString } from 'src/utils/helpers';
+import { queryString } from 'src/utils/queryString';
 
 import BaseAPI from './BaseAPI';
 

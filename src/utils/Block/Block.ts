@@ -1,5 +1,5 @@
 import EventBus from '../EventBus';
-import { isEqual } from '../helpers';
+import { isEqual } from '../isEqual';
 
 import { nanoid } from 'nanoid';
 
