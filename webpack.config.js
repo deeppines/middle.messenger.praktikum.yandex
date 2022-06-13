@@ -22,12 +22,13 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    historyApiFallback: true,
     compress: true,
+    hot: true,
     port: 3000,
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.ts$/i,
         use: {
           loader: 'ts-loader',
@@ -51,17 +52,22 @@ module.exports = {
         loader: 'pug-loader'
       },
       {
-        test: /\.(svg|png|jpg|gif)$/i,
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'assets/icons',
+            outputPath: 'assets/images',
           },
         }],
       },
       {
         test: /\.(woff(2)?|ttf|eot)$/i,
+        type: 'asset/inline',
         use: [{
           loader: 'file-loader',
           options: {
@@ -80,12 +86,10 @@ module.exports = {
       filename: '[name].css',
     }),
     new CopyPlugin({
-      patterns: [
-        {
-          from: 'src/assets/static',
-          to: 'assets/static'
-        }
-      ]
+      patterns: [{
+        from: 'src/assets/static',
+        to: 'assets/static'
+      }]
     })
   ]
 }
