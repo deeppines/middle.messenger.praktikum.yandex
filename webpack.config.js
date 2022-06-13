@@ -2,19 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  mode: 'development',
-  devtool: 'eval-source-map',
+  mode: devMode ? 'development' : 'production',
   stats: 'minimal',
   entry: './src/pages/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: devMode ? '[name].[contenthash].js' : '[name].js',
     clean: true,
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: ['.ts', '.tsx', '.js'],
     alias: {
       'src': path.resolve(__dirname, './src'),
     }
@@ -79,7 +80,7 @@ module.exports = {
       template: 'src/pages/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/styles/[name].css',
+      filename: devMode ? 'assets/styles/[name].[contenthash].css' : 'assets/styles/[name].css',
     }),
     new CopyPlugin({
       patterns: [{
@@ -87,5 +88,11 @@ module.exports = {
         to: 'assets/static'
       }]
     })
-  ]
+  ],
+  optimization: {
+    minimize: devMode ? false : true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ]
+  },
 }
