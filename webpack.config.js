@@ -41,12 +41,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [{
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            publicPath: '/style/'
-          }
-        }, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.pug$/,
@@ -84,7 +79,7 @@ module.exports = {
       template: 'src/pages/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'assets/styles/[name].css',
     }),
     new CopyPlugin({
       patterns: [{
