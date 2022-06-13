@@ -14,7 +14,7 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: [".ts", ".tsx", ".js"],
     alias: {
       'src': path.resolve(__dirname, './src'),
     }
@@ -30,7 +30,7 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.ts$/i,
+        test: /\.tsx?$/,
         use: {
           loader: 'ts-loader',
           options: {
