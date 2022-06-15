@@ -41,6 +41,18 @@ npm run test
 
 [Ссылка на Хостинг](https://competent-clarke-aa0ae8.netlify.app/)
 
+## Heroku
+
+[Ссылка на статику из Dockerfile](https://deeppines-chat.herokuapp.com/)
+
+## Использованные инструменты и библиотеки
+
+* Код - `typescript`, `pug`, `sass`
+* Сборка - `webpack`
+* Тестирование - `mocha`, `chai`, `mocha-jsdom`, `json-server`, `sinon`
+* Линтеры/precommit - `husky`, `stylelint`, `eslint`
+* Сервер статики - `express`, `webpack-dev-server`
+
 ## Макеты
 
 Макеты проекта в [Figma](https://www.figma.com/file/2HM1RtnaUzfmjMgRSyfSwy/WebChat?node-id=2%3A4)
@@ -50,3 +62,4 @@ npm run test
 [Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)<br>
 [Ссылка для ревью - Sprint-2](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/2)<br>
 [Ссылка для ревью - Sprint-3](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/3)<br>
+[Ссылка для ревью - Sprint-4]()<br>
