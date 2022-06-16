@@ -62,4 +62,4 @@ npm run test
 [Ссылка для ревью - Sprint-1](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/1)<br>
 [Ссылка для ревью - Sprint-2](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/2)<br>
 [Ссылка для ревью - Sprint-3](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/3)<br>
-[Ссылка для ревью - Sprint-4]()<br>
+[Ссылка для ревью - Sprint-4](https://github.com/deeppines/middle.messenger.praktikum.yandex/pull/9)<br>
